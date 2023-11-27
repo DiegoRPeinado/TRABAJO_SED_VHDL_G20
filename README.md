@@ -1,6 +1,6 @@
-# TRABAJO_SED_G20
+# TRABAJO_SED_VHDL_G20
 
- Programación en VHDL de una máquina expendedora y aplicación domótica en un microcontrolador
+ Programación en VHDL de una máquina expendedora mediante una máquina de estados.
 
  
 # Integrantes
