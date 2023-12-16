@@ -33,13 +33,35 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity SYNCHRNZR is
     Port ( CLK : in STD_LOGIC;
-           MONEDAS_IN : in STD_LOGIC_VECTOR (3 downto 0);
-           MONEDAS_OUT : out STD_LOGIC_VECTOR (3 downto 0));
+           ASYNC_IN: in STD_LOGIC_VECTOR (5 downto 0); -- JUNTAMOS TOODAS LAS SEÑALES EN UNA
+           SYNCD_MONEDAS: out STD_LOGIC_VECTOR (3 downto 0);
+           SYNCD_PAGAR: out STD_LOGIC;
+           SYNCD_TIPO_REFRESCO: out STD_LOGIC);
 end SYNCHRNZR;
 
 architecture Behavioral of SYNCHRNZR is
 
+    SIGNAL SREG_1: STD_LOGIC_VECTOR(5 downto 0);
+    SIGNAL SREG_2: STD_LOGIC_VECTOR(5 downto 0);
+    
 begin
 
-
+    registro_1:PROCESS(CLK)
+    BEGIN
+        IF rising_edge(CLK) then
+            SREG_1 <= ASYNC_IN;
+        END IF;
+    END PROCESS;
+    
+    registro_2:PROCESS(CLK)
+    BEGIN
+        IF rising_edge(CLK) then
+            SREG_2 <= SREG_1;
+        END IF;
+    END PROCESS;
+    
+    SYNCD_MONEDAS <= SREG_2(3 downto 0);
+    SYNCD_PAGAR <= SREG_2(4);
+    SYNCD_TIPO_REFRESCO <= SREG_2(5);
+    
 end Behavioral;

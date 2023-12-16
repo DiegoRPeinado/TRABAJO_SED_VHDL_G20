@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity EDGE_DETECTOR is
     Port ( CLK : in STD_LOGIC;
            MONEDAS_IN : in STD_LOGIC_VECTOR (3 downto 0);
-           EDGE : out STD_LOGIC_VECTOR (3 downto 0));
+           EDGE_MONEDAS : out STD_LOGIC_VECTOR (3 downto 0));
 end EDGE_DETECTOR;
 
 architecture Behavioral of EDGE_DETECTOR is

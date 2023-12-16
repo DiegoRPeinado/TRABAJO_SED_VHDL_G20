@@ -1,0 +1,558 @@
+/*
+
+AMD Vivado v2023.1 (64-bit) [Major: 2023, Minor: 1]
+SW Build: 3865809 on Sun May  7 15:05:29 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+
+Process ID (PID): 8620
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Dec 16 13:45:34 CET 2023
+Time zone: 	Central European Standard Time (Europe/Madrid)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+OS font scaling: 125%
+
+Java version: 	17.0.3 64-bit
+JavaFX version: 17.0.1
+Java home: 	C:/Xilinx/Vivado/2023.1/tps/win64/jre17.0.3_7
+Java executable: 	C:/Xilinx/Vivado/2023.1/tps/win64/jre17.0.3_7/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	diego
+User home directory: C:/Users/diego
+User working directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2023.1
+RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2023.1/bin
+
+Vivado preferences file: C:/Users/diego/AppData/Roaming/Xilinx/Vivado/2023.1/vivado.xml
+Vivado preferences directory: C:/Users/diego/AppData/Roaming/Xilinx/Vivado/2023.1/
+Vivado layouts directory: C:/Users/diego/AppData/Roaming/Xilinx/Vivado/2023.1/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2023.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/vivado.log
+Vivado journal file: 	C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/vivado.jou
+Engine tmp dir: 	C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/.Xil/Vivado-8620-LAPTOP-9VF0APCD
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: C:/Xilinx/Vivado/2023.1
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent8976 "C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr"
+RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
+RDI_BASEROOT: C:/Xilinx/Vivado
+RDI_BINDIR: C:/Xilinx/Vivado/2023.1/bin
+RDI_BINROOT: C:/Xilinx/Vivado/2023.1/bin
+RDI_BUILD: yes
+RDI_CHECK_PROG: True
+RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data
+RDI_INSTALLROOT: C:/Xilinx
+RDI_INSTALLVER: 2023.1
+RDI_INSTALLVERSION: 2023.1
+RDI_ISE_PLATFORM: nt64
+RDI_JAVACEFROOT: C:/Xilinx/Vivado/2023.1/tps/win64/java-cef-95.0.4638.69
+RDI_JAVAFXROOT: C:/Xilinx/Vivado/2023.1/tps/win64/javafx-sdk-17.0.1
+RDI_JAVAROOT: C:/Xilinx/Vivado/2023.1/tps/win64/jre17.0.3_7
+RDI_JAVA_VERSION: 17.0.3_7
+RDI_LIBDIR: C:/Xilinx/Vivado/2023.1/lib/win64.o
+RDI_MINGW_LIB: C:/Xilinx/Vivado/2023.1\tps\mingw\6.2.0\win64.o\nt\bin;C:/Xilinx/Vivado/2023.1\tps\mingw\6.2.0\win64.o\nt\libexec\gcc\x86_64-w64-mingw32\6.2.0
+RDI_OPT_EXT: .o
+RDI_PLATFORM: win64
+RDI_PREPEND_PATH: C:/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2023.1/ids_lite/ISE/lib/nt64
+RDI_PROG: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/vivado.exe
+RDI_PROGNAME: vivado.exe
+RDI_PYTHON3: C:/Xilinx/Vivado/2023.1\tps\win64\python-3.8.3
+RDI_PYTHON3_VERSION: 3.8.3
+RDI_PYTHONHOME: C:/Xilinx/Vivado/2023.1\tps\win64\python-3.8.3
+RDI_PYTHONPATH: C:/Xilinx/Vivado/2023.1\tps\win64\python-3.8.3;C:/Xilinx/Vivado/2023.1\tps\win64\python-3.8.3\bin;C:/Xilinx/Vivado/2023.1\tps\win64\python-3.8.3\lib;C:/Xilinx/Vivado/2023.1\tps\win64\python-3.8.3\lib\site-packages
+RDI_PYTHON_LD_LIBPATH: C:/Xilinx/Vivado/2023.1\tps\win64\python-3.8.3\lib
+RDI_SESSION_INFO: C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20:LAPTOP-9VF0APCD-16-12-2023_13-44-57,31
+RDI_SHARED_DATA: C:/Xilinx/SharedData/2023.1/data
+RDI_TPS_ROOT: C:/Xilinx/Vivado/2023.1/tps/win64
+RDI_USE_JDK17: True
+RDI_VERBOSE: False
+XILINX: C:/Xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2023.1
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2023.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2023.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2023.1
+_RDI_BINROOT: C:\Xilinx\Vivado\2023.1\bin
+_RDI_CWD: C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 714 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr. Version: Vivado v2023.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 747 MB. GUI used memory: 70 MB. Current time: 12/16/23, 1:45:36 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 131 MB (+135210kb) [00:00:32]
+// [Engine Memory]: 1,095 MB (+996821kb) [00:00:32]
+// WARNING: HEventQueue.dispatchEvent() is taking  3745 ms.
+// Tcl Message: open_project C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/SED/MaquinaExp_G20' since last save. INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,161 MB. GUI used memory: 74 MB. Current time: 12/16/23, 1:45:52 PM CET
+// [Engine Memory]: 1,164 MB (+14886kb) [00:00:35]
+// Project name: MaquinaExp_G20; location: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:40 ; elapsed = 00:00:20 . Memory (MB): peak = 1516.012 ; gain = 486.402 
+dismissDialog("Open Project"); // bq
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MAQ_EXP(Estructural) (MAQ_EXP.vhd)]", 1, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MAQ_EXP(Estructural) (MAQ_EXP.vhd)]", 1, true, false, false, false, false, true); // E - Double Click - Node
+// [GUI Memory]: 150 MB (+12498kb) [00:02:26]
+// Elapsed time: 808 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MAQ_EXP(Estructural) (MAQ_EXP.vhd), SYNC : SYNCHRNZR(Behavioral) (SYNCHRONIZER.vhd)]", 2, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MAQ_EXP(Estructural) (MAQ_EXP.vhd), SYNC : SYNCHRNZR(Behavioral) (SYNCHRONIZER.vhd)]", 2, false, false, false, false, false, true); // E - Double Click
+// Elapsed time: 178 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 550, 265); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 571, 295); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 568, 288); // ad
+// Elapsed time: 23 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 207, 305); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 316, 322); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 311, 308); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 526, 281); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 320, 309); // ad
+// Elapsed time: 21 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 368, 306); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 359, 322); // ad
+// Elapsed time: 24 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 378, 336); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 429, 313); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 389, 347); // ad
+// Elapsed time: 34 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 445, 313); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 407, 345); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 378, 271); // ad
+// Elapsed time: 317 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MAQ_EXP.vhd", 1); // o
+// Elapsed time: 213 seconds
+selectCodeEditor("MAQ_EXP.vhd", 156, 159, false, false, false, true, false); // ad - Popup Trigger
+selectCodeEditor("MAQ_EXP.vhd", 56, 122); // ad
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SYNCHRONIZER.vhd", 2); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 1,166 MB. GUI used memory: 76 MB. Current time: 12/16/23, 2:15:57 PM CET
+// Elapsed time: 207 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 415, 288); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 249, 280); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 249, 280); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 102, 280); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 401, 258); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 180, 240); // ad
+// Elapsed time: 10 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 323, 218); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 200, 197); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 192, 175); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 200, 195); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 200, 195, false, false, false, false, true); // ad - Double Click
+selectCodeEditor("SYNCHRONIZER.vhd", 156, 178); // ad
+// Elapsed time: 13 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 387, 180); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 526, 167); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 534, 182); // ad
+// Elapsed time: 17 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 485, 207); // ad
+// Elapsed time: 134 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 35m:11s
+// Elapsed Time for: 'L.f': 35m:13s
+selectCodeEditor("SYNCHRONIZER.vhd", 151, 201); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 382, 251); // ad
+// Elapsed time: 250 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 47, 305); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 38, 291); // ad
+// Elapsed time: 17 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 4, 282); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 164, 286); // ad
+// Elapsed time: 18 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 129, 307); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 155, 283); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 41, 318); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 10, 306); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 146, 198); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 113, 239); // ad
+// Elapsed time: 94 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 26 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 438, 69); // ad
+// Elapsed time: 14 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 154, 70); // ad
+typeControlKey((HResource) null, "SYNCHRONIZER.vhd", 'c'); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 192, 104); // ad
+typeControlKey((HResource) null, "SYNCHRONIZER.vhd", 'v'); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 155, 202); // ad
+// Elapsed time: 11 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 360, 98); // ad
+// Elapsed time: 12 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 210, 292); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 211, 286); // ad
+// Elapsed time: 74 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 251, 244); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 251, 244); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 185, 307); // ad
+// Elapsed time: 73 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 149, 310); // ad
+// Elapsed time: 54 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 46m:57s
+// Elapsed Time for: 'L.f': 46m:59s
+selectCodeEditor("SYNCHRONIZER.vhd", 362, 308); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 317, 231); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 386, 159); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 463, 219); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 464, 261); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 301, 205); // ad
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 47m:33s
+// Elapsed Time for: 'L.f': 47m:35s
+selectCodeEditor("SYNCHRONIZER.vhd", 148, 328); // ad
+typeControlKey((HResource) null, "SYNCHRONIZER.vhd", 'c'); // ad
+// HMemoryUtils.trashcanNow. Engine heap size: 1,166 MB. GUI used memory: 76 MB. Current time: 12/16/23, 2:45:57 PM CET
+// Elapsed time: 2023 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 39, 152); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 34, 202); // ad
+typeControlKey((HResource) null, "SYNCHRONIZER.vhd", 'v'); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 31, 194); // ad
+// Elapsed time: 19 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:21m:54s
+// Elapsed Time for: 'L.f': 01h:21m:56s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,166 MB. GUI used memory: 58 MB. Current time: 12/16/23, 3:15:58 PM CET
+// Elapsed time: 978 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 72, 305); // ad
+// Elapsed time: 21 seconds
+selectCodeEditor("SYNCHRONIZER.vhd", 215, 151); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 102, 52); // ad
+selectCodeEditor("SYNCHRONIZER.vhd", 98, 52); // ad
+typeControlKey((HResource) null, "SYNCHRONIZER.vhd", 'c'); // ad
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:38m:42s
+// Elapsed Time for: 'L.f': 01h:38m:44s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MAQ_EXP.vhd", 1); // o
+selectCodeEditor("MAQ_EXP.vhd", 26, 117); // ad
+selectCodeEditor("MAQ_EXP.vhd", 37, 117); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'v'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 91, 144); // ad
+typeControlKey(null, null, 'z');
+selectCodeEditor("MAQ_EXP.vhd", 91, 144); // ad
+selectCodeEditor("MAQ_EXP.vhd", 93, 191); // ad
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:39m:12s
+// Elapsed Time for: 'L.f': 01h:39m:14s
+// Elapsed time: 133 seconds
+selectCodeEditor("MAQ_EXP.vhd", 566, 273); // ad
+// Elapsed time: 29 seconds
+selectCodeEditor("MAQ_EXP.vhd", 463, 291); // ad
+// Elapsed time: 40 seconds
+selectCodeEditor("MAQ_EXP.vhd", 674, 290); // ad
+selectCodeEditor("MAQ_EXP.vhd", 674, 290); // ad
+// Elapsed time: 20 seconds
+selectCodeEditor("MAQ_EXP.vhd", 663, 152); // ad
+selectCodeEditor("MAQ_EXP.vhd", 248, 314); // ad
+// Elapsed time: 19 seconds
+selectCodeEditor("MAQ_EXP.vhd", 375, 282); // ad
+selectCodeEditor("MAQ_EXP.vhd", 526, 301); // ad
+// Elapsed time: 23 seconds
+selectCodeEditor("MAQ_EXP.vhd", 85, 220); // ad
+selectCodeEditor("MAQ_EXP.vhd", 69, 6); // ad
+selectCodeEditor("MAQ_EXP.vhd", 69, 6, false, false, false, false, true); // ad - Double Click
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'c'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 42, 285); // ad
+selectCodeEditor("MAQ_EXP.vhd", 42, 285, false, false, false, false, true); // ad - Double Click
+selectCodeEditor("MAQ_EXP.vhd", 42, 285); // ad
+selectCodeEditor("MAQ_EXP.vhd", 42, 285); // ad
+selectCodeEditor("MAQ_EXP.vhd", 42, 285, false, false, false, false, true); // ad - Double Click
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'v'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 175, 280); // ad
+// Elapsed time: 18 seconds
+selectCodeEditor("MAQ_EXP.vhd", 238, 315); // ad
+// Elapsed time: 58 seconds
+selectCodeEditor("MAQ_EXP.vhd", 233, 290); // ad
+selectCodeEditor("MAQ_EXP.vhd", 286, 324); // ad
+selectCodeEditor("MAQ_EXP.vhd", 104, 276); // ad
+// Elapsed time: 23 seconds
+selectCodeEditor("MAQ_EXP.vhd", 60, 91); // ad
+selectCodeEditor("MAQ_EXP.vhd", 60, 91, false, false, false, false, true); // ad - Double Click
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'c'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 98, 308); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'v'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 146, 199); // ad
+selectCodeEditor("MAQ_EXP.vhd", 188, 304); // ad
+selectCodeEditor("MAQ_EXP.vhd", 36, 119); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'c'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 1, 131); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'v'); // ad
+// Elapsed time: 16 seconds
+selectCodeEditor("MAQ_EXP.vhd", 67, 177); // ad
+selectCodeEditor("MAQ_EXP.vhd", 197, 183); // ad
+selectCodeEditor("MAQ_EXP.vhd", 171, 203); // ad
+selectCodeEditor("MAQ_EXP.vhd", 46, 69); // ad
+selectCodeEditor("MAQ_EXP.vhd", 46, 69, false, false, false, false, true); // ad - Double Click
+selectCodeEditor("MAQ_EXP.vhd", 46, 69); // ad
+selectCodeEditor("MAQ_EXP.vhd", 46, 69); // ad
+selectCodeEditor("MAQ_EXP.vhd", 46, 69, false, false, false, true, false); // ad - Popup Trigger
+selectCodeEditor("MAQ_EXP.vhd", 40, 69); // ad
+selectCodeEditor("MAQ_EXP.vhd", 40, 69, false, false, false, false, true); // ad - Double Click
+selectCodeEditor("MAQ_EXP.vhd", 40, 69); // ad
+selectCodeEditor("MAQ_EXP.vhd", 116, 74); // ad
+selectCodeEditor("MAQ_EXP.vhd", 116, 74, false, false, false, false, true); // ad - Double Click
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'c'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 180, 71); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'v'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 251, 142); // ad
+selectCodeEditor("MAQ_EXP.vhd", 105, 28); // ad
+selectCodeEditor("MAQ_EXP.vhd", 250, 125); // ad
+// Elapsed time: 33 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:48m:01s
+// Elapsed Time for: 'L.f': 01h:48m:03s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,166 MB. GUI used memory: 58 MB. Current time: 12/16/23, 3:45:58 PM CET
+// Elapsed time: 880 seconds
+selectCodeEditor("MAQ_EXP.vhd", 74, 227); // ad
+// Elapsed time: 10 seconds
+selectCodeEditor("MAQ_EXP.vhd", 426, 217); // ad
+// Elapsed time: 14 seconds
+selectCodeEditor("MAQ_EXP.vhd", 3, 223); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'c'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 9, 253); // ad
+selectCodeEditor("MAQ_EXP.vhd", 7, 244); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'v'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 83, 237); // ad
+selectCodeEditor("MAQ_EXP.vhd", 182, 250); // ad
+selectCodeEditor("MAQ_EXP.vhd", 183, 250); // ad
+selectCodeEditor("MAQ_EXP.vhd", 188, 245); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'c'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 214, 252); // ad
+selectCodeEditor("MAQ_EXP.vhd", 205, 236); // ad
+typeControlKey((HResource) null, "MAQ_EXP.vhd", 'v'); // ad
+selectCodeEditor("MAQ_EXP.vhd", 89, 259); // ad
+// Elapsed time: 20 seconds
+selectCodeEditor("MAQ_EXP.vhd", 327, 282); // ad
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:03m:55s
+// Elapsed Time for: 'L.f': 02h:03m:57s
+// Elapsed time: 38 seconds
+selectCodeEditor("MAQ_EXP.vhd", 90, 191); // ad
+selectCodeEditor("MAQ_EXP.vhd", 265, 243); // ad
+// Elapsed time: 14 seconds
+selectCodeEditor("MAQ_EXP.vhd", 102, 266); // ad
+selectCodeEditor("MAQ_EXP.vhd", 228, 319); // ad
+// Elapsed time: 12 seconds
+selectCodeEditor("MAQ_EXP.vhd", 33, 268); // ad
+selectCodeEditor("MAQ_EXP.vhd", 72, 115); // ad
+// Elapsed time: 15 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:05m:43s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MAQ_EXP(Estructural) (MAQ_EXP.vhd), EDGE : EDGE_DETECTOR(Behavioral) (EDGE_DETECTOR.vhd)]", 3, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MAQ_EXP(Estructural) (MAQ_EXP.vhd), EDGE : EDGE_DETECTOR(Behavioral) (EDGE_DETECTOR.vhd)]", 3, false, false, false, false, false, true); // E - Double Click
+// Elapsed Time for: 'L.f': 02h:05m:45s
+selectCodeEditor("EDGE_DETECTOR.vhd", 138, 284); // ad
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:05m:53s
+// Elapsed Time for: 'L.f': 02h:05m:55s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MAQ_EXP.vhd", 1); // o
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Run Linter]", 12, false); // f
+// Tcl Message: synth_design -top MAQ_EXP -part xc7a100tcsg324-1 -lint  
+// Tcl Message: Command: synth_design -top MAQ_EXP -part xc7a100tcsg324-1 -lint Starting synth_design Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t' 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,363 MB. GUI used memory: 58 MB. Current time: 12/16/23, 3:52:08 PM CET
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW_FAILED
+// TclEventType: LINTER_RUN
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2311.914 ; gain = 396.523 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Clean up Linter database... 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2414.328 ; gain = 498.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 37-85] Total of 0 linter message(s) generated. INFO: [Synth 37-45] Linter Run Finished! 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2414.328 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc] Finished Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2467.480 ; gain = 0.000 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 2467.480 ; gain = 912.332 
+// Elapsed Time for: 'a.a': 20s
+// 'a' command handler elapsed time: 20 seconds
+// Elapsed time: 20 seconds
+dismissDialog("Run Linter"); // bq
+// [Engine Memory]: 1,384 MB (+169195kb) [02:06:54]
+// Elapsed time: 174 seconds
+selectButton(PAResourceQtoS.StaleMoreAction_OUT_OF_DATE_DETAILS, "details"); // g
+selectButton(PAResourceQtoS.StaleMoreAction_FORCE_UP_TO_DATE, "Force up-to-date"); // g
+// Tcl Message: set_property needs_refresh false [get_runs synth_1] 
+// Tcl Message: set_property needs_refresh false [get_runs impl_1] 
+// Elapsed time: 242 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Run Linter]", 12, false); // f
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -top MAQ_EXP -part xc7a100tcsg324-1 -lint  
+// Tcl Message: Command: synth_design -top MAQ_EXP -part xc7a100tcsg324-1 -lint Starting synth_design Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t' 
+// TclEventType: ELABORATE_FINISH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,430 MB. GUI used memory: 61 MB. Current time: 12/16/23, 3:59:18 PM CET
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: LINTER_RUN
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2467.480 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Clean up Linter database... 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2467.480 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 37-85] Total of 0 linter message(s) generated. INFO: [Synth 37-45] Linter Run Finished! 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2467.480 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc] Finished Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2481.715 ; gain = 0.000 
+// TclEventType: LINTER_RUN
+// Tcl Message: INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 20 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2481.715 ; gain = 14.234 
+// 'a' command handler elapsed time: 7 seconds
+dismissDialog("Run Linter"); // bq
+// Elapsed time: 164 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 13, true); // f - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Elaborate Design"); // u
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: MAQ_EXP 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,467 MB. GUI used memory: 61 MB. Current time: 12/16/23, 4:02:13 PM CET
+// [Engine Memory]: 1,470 MB (+17718kb) [02:16:55]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  1586 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2481.715 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2481.715 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2481.715 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2481.715 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2481.715 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc] Finished Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc] Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.559 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2583.133 ; gain = 101.418 
+// Tcl Message: 16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2583.133 ; gain = 101.418 
+// [Engine Memory]: 1,549 MB (+5871kb) [02:16:58]
+// 'dA' command handler elapsed time: 13 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Open Elaborated Design"); // bq
+// [GUI Memory]: 164 MB (+7326kb) [02:17:46]
+// Elapsed time: 49 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MAQ_EXP.vhd", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SYNCHRONIZER.vhd", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "EDGE_DETECTOR.vhd", 4); // o
