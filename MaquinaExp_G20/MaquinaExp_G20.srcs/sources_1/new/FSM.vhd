@@ -9,7 +9,8 @@ entity FSM is
            TIPO_REFRESCO : in STD_LOGIC;
            RESET : in STD_LOGIC;
            ERROR : out STD_LOGIC;
-           REFRESCO_OUT : out STD_LOGIC);
+           REFRESCO_OUT : out STD_LOGIC;
+           ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0));
 end FSM;
 
 architecture Behavioral of FSM is
@@ -22,7 +23,7 @@ begin
 
     state_register: process(RESET, CLK)
     begin
-        if RESET = '0' then
+        if RESET = '1' then
             CURRENT_STATE <= S0;
         elsif rising_edge(CLK) then
             CURRENT_STATE <= NEXT_STATE;
@@ -60,15 +61,19 @@ begin
             when S0 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '0';
+                ESTADOS_OUT <= "0001";
             when S1 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '0';
+                ESTADOS_OUT  <= "0010";
             when S2 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '1';
+                ESTADOS_OUT <= "0100";
             when S3 =>
                 ERROR <= '1';
                 REFRESCO_OUT <= '0';
+                ESTADOS_OUT <= "1000";
         end case;
     end process;
 

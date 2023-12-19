@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Dec 19 16:50:43 2023
+| Date         : Tue Dec 19 17:55:58 2023
 | Host         : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MAQ_EXP_utilization_synth.rpt -pb MAQ_EXP_utilization_synth.pb
 | Design       : MAQ_EXP
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    9 |     0 |          0 |       210 |  4.29 |
+| Bonded IOB                  |   13 |     0 |          0 |       210 |  6.19 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -151,14 +151,13 @@ Warning! LUT value is adjusted to account for LUT combining.
 | FDRE     |   18 |        Flop & Latch |
 | IBUF     |    7 |                  IO |
 | FDCE     |    7 |        Flop & Latch |
+| OBUF     |    6 |                  IO |
 | LUT6     |    6 |                 LUT |
 | LUT5     |    6 |                 LUT |
+| LUT2     |    5 |                 LUT |
 | LUT4     |    4 |                 LUT |
 | LUT3     |    3 |                 LUT |
-| LUT2     |    3 |                 LUT |
-| OBUF     |    2 |                  IO |
 | LDCE     |    2 |        Flop & Latch |
-| LUT1     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

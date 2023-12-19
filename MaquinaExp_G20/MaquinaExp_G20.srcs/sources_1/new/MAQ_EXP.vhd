@@ -8,7 +8,9 @@ entity MAQ_EXP is
            MONEDAS : in STD_LOGIC_VECTOR (3 downto 0);
            TIPO_REFRESCO : in STD_LOGIC;
            ERROR : out STD_LOGIC;
-           REFRESCO_OUT : out STD_LOGIC);
+           REFRESCO_OUT : out STD_LOGIC;
+           ESTADOS: out std_logic_vector (3 downto 0));
+           
 end MAQ_EXP;
 
 architecture Estructural of MAQ_EXP is
@@ -49,7 +51,8 @@ component FSM is
     TIPO_REFRESCO : in STD_LOGIC;
     RESET : in STD_LOGIC;
     ERROR : out STD_LOGIC;
-    REFRESCO_OUT : out STD_LOGIC);
+    REFRESCO_OUT : out STD_LOGIC;
+    ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
 signal AUX1: std_logic_vector (3 DOWNTO 0); --Conecta MONEDAS[] de SYNC con el EDGE_DETECTOR
@@ -83,7 +86,7 @@ MONEDAS => AUX2,
 PAGO_OK => AUX3,
 ERROR => AUX4);
 
-ESTADOS: FSM PORT MAP(
+MAQ_ESTADOS: FSM PORT MAP(
 CLK => CLK,
 PAGAR => AUX5,
 PAGO_OK => AUX3,
@@ -91,6 +94,7 @@ ERROR_COUNTER => AUX4,
 TIPO_REFRESCO => AUX6,
 RESET => RESET,
 ERROR => ERROR,
-REFRESCO_OUT => REFRESCO_OUT);
+REFRESCO_OUT => REFRESCO_OUT,
+ESTADOS_OUT => ESTADOS);
 
 end Estructural;
