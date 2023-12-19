@@ -8,7 +8,7 @@ entity COUNTER is
   CLK: in std_logic;
   CE: in std_logic;
   RESET: in std_logic;
-  MONEDAS: in std_logic_vector(4 downto 0);
+  MONEDAS: in std_logic_vector(3 downto 0);
   --TIPO_REFRESCO: in std_logic;
   ERROR: out std_logic;
   PAGO_OK: out std_logic
