@@ -3,20 +3,16 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Dec 19 15:52:29 2023
-# Process ID: 5628
+# Start of session at: Tue Dec 19 15:14:14 2023
+# Process ID: 18900
 # Current directory: C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2636 C:\Users\monic\Documents\GitHub\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12660 C:\Users\monic\Documents\GitHub\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr
 # Log file: C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/vivado.log
 # Journal file: C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20\vivado.jou
 # Running On: LAPTOP-25CDU7N9, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 17061 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20' since last save.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.gen/sources_1'.
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.ip_user_files'.
-Scanning sources...
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
@@ -84,7 +80,6 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-Finished scanning sources
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
@@ -98,10 +93,15 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.ip_user_files'.
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 1452.293 ; gain = 231.633
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 1464.215 ; gain = 389.887
 update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 19 15:56:29 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 19 15:26:11 2023...
