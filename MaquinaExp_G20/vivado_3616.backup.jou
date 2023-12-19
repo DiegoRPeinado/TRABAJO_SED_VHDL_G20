@@ -3,10 +3,10 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Mon Dec 18 21:25:49 2023
-# Process ID: 10724
+# Start of session at: Tue Dec 19 16:44:16 2023
+# Process ID: 3616
 # Current directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15700 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6300 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr
 # Log file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/vivado.log
 # Journal file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20\vivado.jou
 # Running On: LAPTOP-9VF0APCD, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 8320 MB
@@ -14,7 +14,13 @@
 start_gui
 open_project C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.xpr
 update_compile_order -fileset sources_1
-synth_design -top MAQ_EXP -part xc7a100tcsg324-1 -lint 
-set_property needs_refresh false [get_runs synth_1]
-set_property needs_refresh false [get_runs impl_1]
-synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1 -name synth_1

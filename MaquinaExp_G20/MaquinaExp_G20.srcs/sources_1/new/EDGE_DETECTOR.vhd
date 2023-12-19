@@ -22,36 +22,30 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity EDGE_DETECTOR is
     Port (
-        CLK : in STD_LOGIC;
-        ASYNC_IN : in STD_LOGIC_VECTOR(5 downto 0); -- 6 bits de señales de entrada.
-        EDGE_DETECTED : out STD_LOGIC_VECTOR(5 downto 0) -- Salida de detección de flanco.
+      CLK : in STD_LOGIC;
+      MONEDAS_IN : in STD_LOGIC_VECTOR(3 downto 0); -- 6 bits de señales de entrada.
+      EDGE_MONEDAS : out STD_LOGIC_VECTOR(3 downto 0) -- Salida de detección de flanco.
     );
 end EDGE_DETECTOR;
 
 architecture Behavioral of EDGE_DETECTOR is
     
-    signal prev_async_in : STD_LOGIC_VECTOR(5 downto 0);
-begin
-    
+    signal previous_data : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+	begin
     process(CLK)
-    begin
-        if rising_edge(CLK) then
-            -- Detecta el flanco comparando la entrada actual con el estado anterior.
-            EDGE_DETECTED <= ASYNC_IN and not prev_async_in;
-            -- Actualiza el estado anterior con el estado actual.
-            prev_async_in <= ASYNC_IN;
+    
+    	begin
+        if rising_edge (CLK) then
+          if MONEDAS_IN /= previous_data then
+              EDGE_MONEDAS <= MONEDAS_IN;
+          else
+              EDGE_MONEDAS <= "0000";
+          end if;
+          previous_data <= MONEDAS_IN;
         end if;
+        
     end process;
 end Behavioral;
 

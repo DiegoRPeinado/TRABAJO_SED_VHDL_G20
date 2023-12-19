@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Dec 19 15:57:37 2023
+# Process ID: 12292
+# Current directory: C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21400 C:\Users\monic\Documents\GitHub\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr
+# Log file: C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/vivado.log
+# Journal file: C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20\vivado.jou
+# Running On: LAPTOP-25CDU7N9, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 17061 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/monic/Documents/GitHub/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.xpr
+update_compile_order -fileset sources_1
