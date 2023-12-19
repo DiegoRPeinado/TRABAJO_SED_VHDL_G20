@@ -1,0 +1,408 @@
+Colocar a la derecha:
+-------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity FSM is
+    Port ( CLK : in STD_LOGIC;
+           PAGAR : in STD_LOGIC;
+           PAGO_OK : in STD_LOGIC;
+           ERROR_COUNTER : in STD_LOGIC;
+           TIPO_REFRESCO : in STD_LOGIC;
+           RESET : in STD_LOGIC;
+           ERROR : out STD_LOGIC;
+           REFRESCO_OUT : out STD_LOGIC;
+           ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0));
+end FSM;
+
+architecture Behavioral of FSM is
+
+type STATES is (S0,S1,S2,S3);
+signal CURRENT_STATE: STATES := S0;
+signal NEXT_STATE: STATES;
+
+begin
+
+    state_register: process(RESET, CLK)
+    begin
+        if RESET = '1' then
+            CURRENT_STATE <= S0;
+        elsif rising_edge(CLK) then
+            CURRENT_STATE <= NEXT_STATE;
+        end if;
+    end process;
+    
+    nextstate: process(PAGAR, PAGO_OK, ERROR_COUNTER, CURRENT_STATE)
+    begin
+        NEXT_STATE <= CURRENT_STATE;
+        case CURRENT_STATE is 
+            when S0 =>
+                if PAGAR = '1' then
+                    NEXT_STATE <= S1;
+                end if;                
+            when S1 =>
+                if PAGO_OK = '1' then
+                    NEXT_STATE <= S2;
+                elsif ERROR_COUNTER = '1' then
+                    NEXT_STATE <= S3;
+                end if;                
+            when S2 =>
+                if PAGAR = '0' then
+                    NEXT_STATE <= S0;
+                end if;           
+            when S3 =>
+                if RESET = '1' then
+                    NEXT_STATE <= S0;
+                end if;            
+        end case;
+    end process;
+    
+    output_control: process(CURRENT_STATE)
+    begin
+        case CURRENT_STATE is 
+            when S0 =>
+                ERROR <= '0';
+                REFRESCO_OUT <= '0';
+                ESTADOS_OUT <= "0001";
+            when S1 =>
+                ERROR <= '0';
+                REFRESCO_OUT <= '0';
+                ESTADOS_OUT  <= "0010";
+            when S2 =>
+                ERROR <= '0';
+                REFRESCO_OUT <= '1';
+                ESTADOS_OUT <= "0100";
+            when S3 =>
+                ERROR <= '1';
+                REFRESCO_OUT <= '0';
+                ESTADOS_OUT <= "1000";
+        end case;
+    end process;
+
+end Behavioral;
+
+
+-----------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity COUNTER is
+  Port (
+  CLK: in std_logic;
+  CE: in std_logic;
+  RESET: in std_logic;
+  MONEDAS: in std_logic_vector(3 downto 0);
+  TIPO_REFRESCO: in std_logic;
+  ERROR: out std_logic;
+  PAGO_OK: out std_logic
+  );
+  
+end COUNTER;
+
+architecture Behavioral of COUNTER is
+    
+    signal CUENTA_SIG: std_logic_vector(4 downto 0) :="00000"; -- va sumando las monedas introducidas
+    signal ERROR_SIG: std_logic :='0';
+    signal PAGO_OK_SIG: std_logic;
+    
+begin
+process(CLK, RESET)
+    --variable CUENTA: std_logic_vector(3 downto 0) := "00000";
+    begin 
+        if (RESET='0' and CE='1') then 
+            CUENTA_SIG <="00000";  -- Inicializo la cuenta
+        elsif rising_edge(CLK) then
+          -- Suma la moneda introducida al contador CUENTA_SIG
+            if MONEDAS = "0001" then 
+                CUENTA_SIG <= CUENTA_SIG + "00001";  -- +10cents
+            elsif MONEDAS = "0010" then
+                CUENTA_SIG <= CUENTA_SIG + "00010";  -- +20cents
+            elsif MONEDAS = "0100" then
+                CUENTA_SIG <= CUENTA_SIG + "00101";  -- +50cents
+            elsif MONEDAS = "1000" then
+                CUENTA_SIG <= CUENTA_SIG + "01010";  -- +1€
+            end if;
+        end if;
+        
+        -- Comprobamos el estado del dinero
+        if CUENTA_SIG > "01010" then
+            ERROR_SIG <= '1';  -- Me he pasado de 1 euro
+            PAGO_OK_SIG <= '0';
+        elsif CUENTA_SIG = "01010" then
+            PAGO_OK_SIG <= '1'; -- He introducido lo correcto
+        elsif CUENTA_SIG < "01010" then
+            PAGO_OK_SIG <= '0'; -- No he metido suficiente 
+        end if;   
+        
+end process;
+ 
+ERROR <= ERROR_SIG;
+PAGO_OK <= PAGO_OK_SIG;
+
+end Behavioral;
+
+---------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity EDGE_DETECTOR is
+    Port (
+      CLK : in STD_LOGIC;
+      MONEDAS_IN : in STD_LOGIC_VECTOR(3 downto 0); -- 6 bits de señales de entrada.
+      EDGE_MONEDAS : out STD_LOGIC_VECTOR(3 downto 0) -- Salida de detección de flanco.
+    );
+end EDGE_DETECTOR;
+
+architecture Behavioral of EDGE_DETECTOR is
+    
+    signal previous_data : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+	begin
+    process(CLK)
+    
+    	begin
+        if rising_edge (CLK) then
+          if MONEDAS_IN /= previous_data then
+              EDGE_MONEDAS <= MONEDAS_IN;
+          else
+              EDGE_MONEDAS <= "0000";
+          end if;
+          previous_data <= MONEDAS_IN;
+        end if;
+        
+    end process;
+end Behavioral;
+
+
+-------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity SYNCHRNZR is
+    Port ( CLK : in STD_LOGIC;
+           ASYNC_IN: in STD_LOGIC_VECTOR (5 downto 0); -- JUNTAMOS TOODAS LAS SEÑALES EN UNA
+           SYNCD_MONEDAS: out STD_LOGIC_VECTOR (3 downto 0);
+           SYNCD_PAGAR: out STD_LOGIC;
+           SYNCD_TIPO_REFRESCO: out STD_LOGIC);
+end SYNCHRNZR;
+
+architecture Behavioral of SYNCHRNZR is
+
+    SIGNAL SREG_1: STD_LOGIC_VECTOR(5 downto 0);
+    SIGNAL SREG_2: STD_LOGIC_VECTOR(5 downto 0);
+    
+begin
+
+    registro_1:PROCESS(CLK)
+    BEGIN
+        IF rising_edge(CLK) then
+            SREG_1 <= ASYNC_IN;
+        END IF;
+    END PROCESS;
+    
+    registro_2:PROCESS(CLK)
+    BEGIN
+        IF rising_edge(CLK) then
+            SREG_2 <= SREG_1;
+        END IF;
+    END PROCESS;
+    
+    SYNCD_MONEDAS <= SREG_2(3 downto 0);
+    SYNCD_PAGAR <= SREG_2(4);
+    SYNCD_TIPO_REFRESCO <= SREG_2(5);
+    
+end Behavioral;
+
+-------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity MAQ_EXP is
+    Port ( CLK : in STD_LOGIC;
+           RESET : in STD_LOGIC;
+           PAGAR : in STD_LOGIC;
+           MONEDAS : in STD_LOGIC_VECTOR (3 downto 0);
+           TIPO_REFRESCO : in STD_LOGIC;
+           ERROR : out STD_LOGIC;
+           REFRESCO_OUT : out STD_LOGIC;
+           ESTADOS: out std_logic_vector (3 downto 0));
+           
+end MAQ_EXP;
+
+architecture Estructural of MAQ_EXP is
+
+component SYNCHRNZR is
+    Port (
+    CLK : in STD_LOGIC;
+    ASYNC_IN: in STD_LOGIC_VECTOR (5 downto 0); -- JUNTAMOS TOODAS LAS SEÑALES EN UNA
+    SYNCD_MONEDAS: out STD_LOGIC_VECTOR (3 downto 0);
+    SYNCD_PAGAR: out STD_LOGIC;
+    SYNCD_TIPO_REFRESCO: out STD_LOGIC);
+end component;
+
+component EDGE_DETECTOR is
+    Port ( 
+    CLK : in STD_LOGIC;
+    MONEDAS_IN : in STD_LOGIC_VECTOR (3 downto 0);
+    EDGE_MONEDAS : out STD_LOGIC_VECTOR (3 downto 0));   
+end component;
+
+component COUNTER is
+    Port ( 
+    CLK : in STD_LOGIC;
+    CE : in STD_LOGIC;
+    RESET : in STD_LOGIC;
+    TIPO_REFRESCO : in std_logic;
+    MONEDAS : in STD_LOGIC_VECTOR (3 downto 0);
+    PAGO_OK : out STD_LOGIC;
+    ERROR : out STD_LOGIC);
+end component;
+
+component FSM is
+    Port ( 
+    CLK : in STD_LOGIC;
+    PAGAR : in STD_LOGIC;
+    PAGO_OK : in STD_LOGIC;
+    ERROR_COUNTER : in STD_LOGIC;
+    TIPO_REFRESCO : in STD_LOGIC;
+    RESET : in STD_LOGIC;
+    ERROR : out STD_LOGIC;
+    REFRESCO_OUT : out STD_LOGIC;
+    ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0));
+end component;
+
+signal AUX1: std_logic_vector (3 DOWNTO 0); --Conecta MONEDAS[] de SYNC con el EDGE_DETECTOR
+signal AUX2: std_logic_vector (3 DOWNTO 0); --Conecta MONEDAS[] de EDGE_DET con el COUNTER
+signal AUX3: std_logiC; --Conecta PAGO_OK del COUNTER con la FSM
+signal AUX4: std_logiC; --Conecta ERROR del COUNTER con la FSM
+signal AUX5: std_logic; --Conecta PAGAR del SYNC con el COUNTER y la FSM
+signal AUX6: std_logic; --Conecta TIPO_TEFRSCO del SYNC con el COUNTER y la FSM
+begin
+
+SYNC: SYNCHRNZR PORT MAP(
+CLK => CLK,
+ASYNC_IN(5) => TIPO_REFRESCO,
+ASYNC_IN(4) => PAGAR,
+ASYNC_IN(3 downto 0) => MONEDAS,
+SYNCD_MONEDAS => AUX1,
+SYNCD_PAGAR => AUX5,
+SYNCD_TIPO_REFRESCO => AUX6);
+
+EDGE: EDGE_DETECTOR PORT MAP(
+CLK => CLK,
+MONEDAS_IN => AUX1,
+EDGE_MONEDAS => AUX2);
+
+CTR: COUNTER PORT MAP(
+CLK => CLK,
+CE => AUX5,
+RESET => RESET,
+TIPO_REFRESCO => AUX6,
+MONEDAS => AUX2,
+PAGO_OK => AUX3,
+ERROR => AUX4);
+
+MAQ_ESTADOS: FSM PORT MAP(
+CLK => CLK,
+PAGAR => AUX5,
+PAGO_OK => AUX3,
+ERROR_COUNTER => AUX4,
+TIPO_REFRESCO => AUX6,
+RESET => RESET,
+ERROR => ERROR,
+REFRESCO_OUT => REFRESCO_OUT,
+ESTADOS_OUT => ESTADOS);
+
+end Estructural;
+
+
+---------------------------------------------------------------
+Colocar en testbench
+
+library IEEE;
+use IEEE.Std_logic_1164.all;
+use IEEE.Numeric_Std.all;
+
+entity MAQ_EXP_tb is
+end;
+
+architecture bench of MAQ_EXP_tb is
+
+  component MAQ_EXP
+      Port ( CLK : in STD_LOGIC;
+             RESET : in STD_LOGIC;
+             PAGAR : in STD_LOGIC;
+             MONEDAS : in STD_LOGIC_VECTOR (3 downto 0);
+             TIPO_REFRESCO : in STD_LOGIC;
+             ERROR : out STD_LOGIC;
+             REFRESCO_OUT : out STD_LOGIC;
+             ESTADOS: out std_logic_vector (3 downto 0));
+  end component;
+
+  signal CLK: STD_LOGIC;
+  signal RESET: STD_LOGIC;
+  signal PAGAR: STD_LOGIC;
+  signal MONEDAS: STD_LOGIC_VECTOR (3 downto 0);
+  signal TIPO_REFRESCO: STD_LOGIC;
+  signal ERROR: STD_LOGIC;
+  signal REFRESCO_OUT: STD_LOGIC;
+  signal ESTADOS: std_logic_vector (3 downto 0);
+  
+  constant clock_period: time := 10 ns;
+
+begin
+
+  uut: MAQ_EXP port map ( CLK           => CLK,
+                          RESET         => RESET,
+                          PAGAR         => PAGAR,
+                          MONEDAS       => MONEDAS,
+                          TIPO_REFRESCO => TIPO_REFRESCO,
+                          ERROR         => ERROR,
+                          REFRESCO_OUT  => REFRESCO_OUT,
+                          ESTADOS       => ESTADOS );
+                          
+   CLK_TREATMENT: process
+   begin
+
+   clk <= '0';
+   wait for 0.5 * clock_period;
+
+   clk <= '1';
+   wait for 0.5 * clock_period;
+
+   end process;
+
+  stimulus: process
+  begin
+  
+    -- Put initialisation code here
+	RESET <= '1';
+    wait for 5 ns;
+    RESET <= '0';
+    wait for 5 ns;
+    
+	PAGAR <= '1';
+    TIPO_REFRESCO <= '1';
+    wait for clock_period;
+    
+    MONEDAS <= "0010";
+    wait for clock_period;
+    
+    wait for clock_period * 2;
+
+    -- Put test bench stimulus code here
+    
+    assert false
+    report "Success: simulation finished."
+    severity failure;
+
+    wait;
+  end process;
+
+
+end;
