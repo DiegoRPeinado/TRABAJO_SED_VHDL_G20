@@ -1,49 +1,59 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 08.12.2023 14:50:24
--- Design Name: 
--- Module Name: COUNTER - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity COUNTER is
-    Port ( CLK : in STD_LOGIC;
-           CE : in STD_LOGIC;
-           RESET : in STD_LOGIC;
-           TIPO_REFRESCO : IN std_logic;
-           MONEDAS : in STD_LOGIC_VECTOR (3 downto 0);
-           PAGO_OK : out STD_LOGIC;
-           ERROR : out STD_LOGIC);
+  Port (
+  CLK: in std_logic;
+  CE: in std_logic;
+  RESET: in std_logic;
+  MONEDAS: in std_logic_vector(3 downto 0);
+  --TIPO_REFRESCO: in std_logic;
+  ERROR: out std_logic;
+  PAGO_OK: out std_logic
+  );
+  
 end COUNTER;
 
 architecture Behavioral of COUNTER is
-
+    
+    signal CUENTA_SIG: std_logic_vector(3 downto 0) :="0000"; -- va sumando las monedas introducidas
+    signal ERROR_SIG: std_logic :='0';
+    signal PAGO_OK_SIG: std_logic;
+    
 begin
-
+process(CLK, RESET)
+    variable CUENTA: std_logic_vector(3 downto 0) := "0000";
+    begin 
+        if (RESET='0' and CE='1') then 
+            CUENTA_SIG <="0000";  -- Inicializo la cuenta
+        elsif rising_edge(CLK) then
+          -- Suma la moneda introducida al contador CUENTA_SIG
+            if MONEDAS = "0001" then 
+                CUENTA_SIG <= CUENTA_SIG + "0001";  -- +10cents
+            elsif MONEDAS = "0010" then
+                CUENTA_SIG <= CUENTA_SIG + "0010";  -- +20cents
+            elsif MONEDAS = "0100" then
+                CUENTA_SIG <= CUENTA_SIG + "0101";  -- +50cents
+            elsif MONEDAS = "1000" then
+                CUENTA_SIG <= CUENTA_SIG + "1010";  -- +1€
+            end if;
+        end if;
+        
+        -- Comprobamos el estado del dinero
+        if CUENTA_SIG > "1010" then
+            ERROR_SIG <= '1';  -- Me he pasado de 1 euro
+            PAGO_OK_SIG <= '0';
+        elsif CUENTA_SIG = "1010" then
+            PAGO_OK_SIG <= '1'; -- He introducido lo correcto
+        elsif CUENTA_SIG < "1010" then
+            PAGO_OK_SIG <= '0'; -- No he metido suficiente 
+        end if;   
+        
+end process;
+ 
+ERROR <= ERROR_SIG;
+PAGO_OK <= PAGO_OK_SIG;
 
 end Behavioral;
