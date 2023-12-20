@@ -58,12 +58,12 @@ component FSM is
     ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
-signal AUX1: std_logic_vector (3 DOWNTO 0):="0000"; --Conecta MONEDAS[] de SYNC con el EDGE_DETECTOR
-signal AUX2: std_logic_vector (3 DOWNTO 0):="0000"; --Conecta MONEDAS[] de EDGE_DET con el COUNTER
-signal AUX3: std_logiC:='0'; --Conecta PAGO_OK del COUNTER con la FSM
-signal AUX4: std_logiC:='0'; --Conec0ta ERROR del COUNTER con la FSM
-signal AUX5: std_logic:='0'; --Conecta PAGAR del SYNC con el COUNTER y la FSM
-signal AUX6: std_logic:='0'; --Conecta TIPO_TEFRSCO del SYNC con el COUNTER y la FSM
+signal AUX1: std_logic_vector (3 DOWNTO 0); --Conecta MONEDAS[] de SYNC con el EDGE_DETECTOR
+signal AUX2: std_logic_vector (3 DOWNTO 0); --Conecta MONEDAS[] de EDGE_DET con el COUNTER
+signal AUX3: std_logic; --Conecta PAGO_OK del COUNTER con la FSM
+signal AUX4: std_logic; --Conec0ta ERROR del COUNTER con la FSM
+signal AUX5: std_logic; --Conecta PAGAR del SYNC con el COUNTER y la FSM
+signal AUX6: std_logic; --Conecta TIPO_TEFRSCO del SYNC con el COUNTER y la FSM
 begin
 
 SYNC: SYNCHRNZR PORT MAP(
@@ -91,7 +91,7 @@ ERROR => AUX4);
 
 MAQ_ESTADOS: FSM PORT MAP(
 CLK => CLK,
-PAGAR => AUX5,
+PAGAR => AUX5, --cambiar
 PAGO_OK => AUX3,
 ERROR_COUNTER => AUX4,
 TIPO_REFRESCO => AUX6,
@@ -100,6 +100,6 @@ ERROR => ERROR,
 REFRESCO_OUT => REFRESCO_OUT,
 ESTADOS_OUT => ESTADOS);
 
-LED_AUX5 <= AUX5;
+LED_AUX5 <= PAGAR;
 
 end Estructural;

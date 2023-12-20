@@ -1,0 +1,7 @@
+Running: xsim.dir/MAQ_EXP_behav/xsimk.exe -simmode gui -wdb MAQ_EXP_behav.wdb -simrunnum 0 -socket 54551
+Design successfully loaded
+Design Loading Memory Usage: 7228 KB (Peak: 7228 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7656 KB (Peak: 7656 KB)
+Simulation CPU Usage: 61 ms

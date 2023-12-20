@@ -30,7 +30,7 @@ begin
         end if;
     end process;
     
-    nextstate: process(PAGAR, PAGO_OK, ERROR_COUNTER, CURRENT_STATE)
+    nextstate: process(CLK) --, PAGAR, PAGO_OK, ERROR_COUNTER, CURRENT_STATE)
     begin
         NEXT_STATE <= CURRENT_STATE;
         case CURRENT_STATE is 
@@ -55,7 +55,7 @@ begin
         end case;
     end process;
     
-    output_control: process(CURRENT_STATE)
+    output_control: process(CLK, CURRENT_STATE)
     begin
         case CURRENT_STATE is 
             when S0 =>

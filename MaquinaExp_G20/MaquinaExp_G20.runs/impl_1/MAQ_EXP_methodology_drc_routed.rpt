@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Dec 20 16:05:56 2023
+| Date         : Wed Dec 20 17:20:38 2023
 | Host         : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command      : report_methodology -file MAQ_EXP_methodology_drc_routed.rpt -pb MAQ_EXP_methodology_drc_routed.pb -rpx MAQ_EXP_methodology_drc_routed.rpx
 | Design       : MAQ_EXP
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 18
+             Violations found: 17
 +-----------+----------+--------------------------------+------------+
 | Rule      | Severity | Description                    | Violations |
 +-----------+----------+--------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert   | 2          |
-| TIMING-18 | Warning  | Missing input or output delay  | 13         |
+| TIMING-18 | Warning  | Missing input or output delay  | 12         |
 | TIMING-20 | Warning  | Non-clocked latch              | 2          |
 | LATCH-1   | Advisory | Existing latches in the design | 1          |
 +-----------+----------+--------------------------------+------------+
@@ -101,11 +101,6 @@ An output delay is missing on ESTADOS[3] relative to the rising and/or falling c
 Related violations: <none>
 
 TIMING-18#12 Warning
-Missing input or output delay  
-An output delay is missing on LED_AUX5 relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#13 Warning
 Missing input or output delay  
 An output delay is missing on REFRESCO_OUT relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
