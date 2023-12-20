@@ -3,10 +3,10 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Dec 20 13:00:32 2023
-# Process ID: 9648
+# Start of session at: Wed Dec 20 15:04:24 2023
+# Process ID: 17004
 # Current directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3044 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17400 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MaquinaExp_G20\MaquinaExp_G20.xpr
 # Log file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/vivado.log
 # Journal file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20\vivado.jou
 # Running On: LAPTOP-9VF0APCD, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 8320 MB
@@ -30,6 +30,7 @@ WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 ava
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zedboard:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zedboard/1.3/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-10:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-20:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.gen/sources_1'.
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.3/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/boards/board_files/zybo/B.4/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
@@ -112,20 +113,19 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 1530.504 ; gain = 412.660
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 1526.523 ; gain = 247.598
 update_compile_order -fileset sources_1
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp with file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/MAQ_EXP.dcp
 launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Wed Dec 20 13:03:01 2023] Launched synth_1...
+[Wed Dec 20 15:09:14 2023] Launched synth_1...
 Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/runme.log
-[Wed Dec 20 13:03:01 2023] Launched impl_1...
+[Wed Dec 20 15:09:14 2023] Launched impl_1...
 Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
@@ -155,7 +155,7 @@ ECHO est  desactivado.
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1580.848 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1553.785 ; gain = 0.980
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A3FE63A
 set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
@@ -169,13 +169,27 @@ program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp with file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/MAQ_EXP.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 20 15:15:49 2023] Launched synth_1...
+Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/runme.log
+[Wed Dec 20 15:15:49 2023] Launched impl_1...
+Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp with file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/MAQ_EXP.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Wed Dec 20 13:10:46 2023] Launched synth_1...
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 20 15:34:57 2023] Launched synth_1...
 Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/runme.log
-[Wed Dec 20 13:10:46 2023] Launched impl_1...
+[Wed Dec 20 15:34:57 2023] Launched impl_1...
 Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
@@ -205,7 +219,7 @@ ECHO est  desactivado.
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1643.281 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1617.625 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A3FE63A
 set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
@@ -219,79 +233,70 @@ program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp with file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/MAQ_EXP.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Wed Dec 20 13:24:35 2023] Launched synth_1...
-Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/runme.log
-[Wed Dec 20 13:24:35 2023] Launched impl_1...
-Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
-open_run impl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: MAQ_EXP
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2017.930 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2413.844 ; gain = 399.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'MAQ_EXP' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/MAQ_EXP.vhd:17]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/SYNCHRONIZER.vhd:34' bound to instance 'SYNC' of component 'SYNCHRNZR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/MAQ_EXP.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/SYNCHRONIZER.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/SYNCHRONIZER.vhd:44]
+INFO: [Synth 8-3491] module 'EDGE_DETECTOR' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/EDGE_DETECTOR.vhd:25' bound to instance 'EDGE' of component 'EDGE_DETECTOR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/MAQ_EXP.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'EDGE_DETECTOR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/EDGE_DETECTOR.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'EDGE_DETECTOR' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/EDGE_DETECTOR.vhd:33]
+INFO: [Synth 8-3491] module 'COUNTER' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/COUNTER.vhd:6' bound to instance 'CTR' of component 'COUNTER' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/MAQ_EXP.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'COUNTER' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/COUNTER.vhd:19]
+WARNING: [Synth 8-614] signal 'CE' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/COUNTER.vhd:26]
+WARNING: [Synth 8-614] signal 'CUENTA_SIG' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/COUNTER.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'COUNTER' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/COUNTER.vhd:19]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/FSM.vhd:4' bound to instance 'MAQ_ESTADOS' of component 'FSM' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/MAQ_EXP.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/FSM.vhd:16]
+WARNING: [Synth 8-614] signal 'RESET' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/FSM.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/FSM.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'MAQ_EXP' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/MAQ_EXP.vhd:17]
+WARNING: [Synth 8-7129] Port TIPO_REFRESCO in module FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TIPO_REFRESCO in module COUNTER is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2504.918 ; gain = 491.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2504.918 ; gain = 491.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2504.918 ; gain = 491.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2504.918 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2696.363 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2696.363 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2696.363 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 1 instance 
 
-open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2819.242 ; gain = 1175.961
-WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/diego/Downloads/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2592.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2623.969 ; gain = 610.051
+17 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2623.969 ; gain = 991.980
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp with file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/MAQ_EXP.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 20 15:42:01 2023] Launched synth_1...
+Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/runme.log
+[Wed Dec 20 15:42:01 2023] Launched impl_1...
+Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
@@ -299,6 +304,17 @@ program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 20 15:47:32 2023] Launched impl_1...
+Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/MAQ_EXP.bit} [get_hw_devices xc7a100t_0]
@@ -308,10 +324,18 @@ refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp with file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/MAQ_EXP.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Wed Dec 20 13:33:07 2023] Launched synth_1...
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 20 15:59:14 2023] Launched synth_1...
 Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/runme.log
-[Wed Dec 20 13:33:07 2023] Launched impl_1...
+[Wed Dec 20 15:59:14 2023] Launched impl_1...
+Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp with file C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/MAQ_EXP.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 20 16:03:25 2023] Launched synth_1...
+Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/synth_1/runme.log
+[Wed Dec 20 16:03:25 2023] Launched impl_1...
 Run output will be captured here: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
@@ -320,6 +344,3 @@ program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292A3FE63A
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 20 13:46:03 2023...

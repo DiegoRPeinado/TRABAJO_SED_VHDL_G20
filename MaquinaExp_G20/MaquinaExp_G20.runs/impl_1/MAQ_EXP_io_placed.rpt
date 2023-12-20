@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date                      : Wed Dec 20 13:35:02 2023
+| Date                      : Wed Dec 20 16:05:16 2023
 | Host                      : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command                   : report_io -file MAQ_EXP_io_placed.rpt
 | Design                    : MAQ_EXP
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            14 |
+|            15 |
 +---------------+
 
 
@@ -191,7 +191,7 @@ Table of Contents
 | J10        |               | Dedicated  | VP_0                         | XADC        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | J11        |               |            | VCCINT                       | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | J12        |               |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| J13        |               | High Range | IO_L17N_T2_A25_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| J13        | LED_AUX5      | High Range | IO_L17N_T2_A25_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | J14        |               | High Range | IO_L19P_T3_A22_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | J15        | MONEDAS[0]    | High Range | IO_L24N_T3_RS0_15            | INPUT       | LVCMOS33    |      15 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | J16        |               |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |

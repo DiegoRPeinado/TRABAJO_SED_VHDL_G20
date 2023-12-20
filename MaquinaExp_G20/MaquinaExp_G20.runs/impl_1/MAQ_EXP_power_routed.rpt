@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Wed Dec 20 13:35:39 2023
+| Date             : Wed Dec 20 16:05:56 2023
 | Host             : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command          : report_power -file MAQ_EXP_power_routed.rpt -pb MAQ_EXP_power_summary_routed.pb -rpx MAQ_EXP_power_routed.rpx
 | Design           : MAQ_EXP
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       59 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       17 |     63400 |            0.03 |
-|   Register     |    <0.001 |       27 |    126800 |            0.02 |
-|   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |    <0.001 |       50 |       --- |             --- |
-| I/O            |     0.004 |       13 |       210 |            6.19 |
+| Slice Logic    |    <0.001 |       64 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       20 |     63400 |            0.03 |
+|   Register     |    <0.001 |       28 |    126800 |            0.02 |
+|   Others       |     0.000 |       10 |       --- |             --- |
+| Signals        |    <0.001 |       53 |       --- |             --- |
+| I/O            |     0.004 |       14 |       210 |            6.67 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.102 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+

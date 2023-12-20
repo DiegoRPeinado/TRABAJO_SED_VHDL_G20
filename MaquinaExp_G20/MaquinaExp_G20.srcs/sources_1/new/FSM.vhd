@@ -23,7 +23,7 @@ begin
 
     state_register: process(RESET, CLK)
     begin
-        if RESET = '1' then
+        if RESET = '0' then
             CURRENT_STATE <= S0;
         elsif rising_edge(CLK) then
             CURRENT_STATE <= NEXT_STATE;
@@ -49,7 +49,7 @@ begin
                     NEXT_STATE <= S0;
                 end if;           
             when S3 =>
-                if RESET = '1' then
+                if RESET = '0' then
                     NEXT_STATE <= S0;
                 end if;            
         end case;
