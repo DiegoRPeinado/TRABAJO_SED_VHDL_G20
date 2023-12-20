@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Tue Dec 19 17:57:16 2023
+| Date             : Wed Dec 20 13:35:39 2023
 | Host             : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command          : report_power -file MAQ_EXP_power_routed.rpt -pb MAQ_EXP_power_summary_routed.pb -rpx MAQ_EXP_power_routed.rpx
 | Design           : MAQ_EXP
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.522        |
+| Total On-Chip Power (W)  | 0.102        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.403        |
-| Device Static (W)        | 0.119        |
+| Dynamic (W)              | 0.005        |
+| Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 64.4         |
-| Junction Temperature (C) | 45.6         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.080 |       61 |       --- |             --- |
-|   LUT as Logic |     0.067 |       18 |     63400 |            0.03 |
-|   Register     |     0.007 |       27 |    126800 |            0.02 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |       59 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       17 |     63400 |            0.03 |
+|   Register     |    <0.001 |       27 |    126800 |            0.02 |
 |   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |     0.139 |       52 |       --- |             --- |
-| I/O            |     4.184 |       13 |       210 |            6.19 |
-| Static Power   |     0.119 |          |           |                 |
-| Total          |     4.522 |          |           |                 |
+| Signals        |    <0.001 |       50 |       --- |             --- |
+| I/O            |     0.004 |       13 |       210 |            6.19 |
+| Static Power   |     0.097 |          |           |                 |
+| Total          |     0.102 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,16 +70,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.276 |       0.243 |      0.033 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.172 |       0.152 |      0.020 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     1.181 |       1.177 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -93,7 +93,7 @@ Table of Contents
 | User Input Data             | Confidence | Details                                                | Action                                                                                                             |
 +-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                           |                                                                                                                    |
@@ -123,9 +123,11 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------+--------+-----------------+
-| Clock | Domain | Constraint (ns) |
-+-------+--------+-----------------+
++-------------+--------+-----------------+
+| Clock       | Domain | Constraint (ns) |
++-------------+--------+-----------------+
+| sys_clk_pin | CLK    |            10.0 |
++-------------+--------+-----------------+
 
 
 3. Detailed Reports
@@ -134,15 +136,10 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------+-----------+
-| Name                | Power (W) |
-+---------------------+-----------+
-| MAQ_EXP             |     4.403 |
-|   CTR               |     0.041 |
-|     PAGO_OK_SIG_reg |     0.006 |
-|   EDGE              |     0.059 |
-|   MAQ_ESTADOS       |     0.048 |
-|   SYNC              |     0.039 |
-+---------------------+-----------+
++---------+-----------+
+| Name    | Power (W) |
++---------+-----------+
+| MAQ_EXP |     0.005 |
++---------+-----------+
 
 

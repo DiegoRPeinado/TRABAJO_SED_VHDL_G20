@@ -26,9 +26,9 @@ begin
 process(CLK, RESET)
     --variable CUENTA: std_logic_vector(3 downto 0) := "00000";
     begin 
-        if (RESET='0' and CE='1') then 
+        if (RESET='1') then 
             CUENTA_SIG <="00000";  -- Inicializo la cuenta
-        elsif rising_edge(CLK) then
+        elsif rising_edge(CLK) and CE='1' then
           -- Suma la moneda introducida al contador CUENTA_SIG
             if MONEDAS = "0001" then 
                 CUENTA_SIG <= CUENTA_SIG + "00001";  -- +10cents
