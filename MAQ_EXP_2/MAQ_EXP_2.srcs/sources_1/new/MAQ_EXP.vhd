@@ -93,10 +93,16 @@ component DISPLAY_CONTROL is
 end component;
 
 component DECODER is
-   PORT (
+   Port (
    CODE : IN std_logic_vector(3 DOWNTO 0);
    CUENTA_LEDS : OUT std_logic_vector(6 DOWNTO 0)
 );
+end component;
+
+component PRESCALER is
+    Port (
+    CLK : in STD_LOGIC;
+    CLK_OUT : out STD_LOGIC);
 end component;
 
 signal AUX1: std_logic_vector (3 DOWNTO 0); --Conecta MONEDAS[] de SYNC con el EDGE_DETECTOR
@@ -108,6 +114,7 @@ signal AUX6: std_logic; --Conecta TIPO_TEFRSCO del SYNC con el COUNTER y la FSM
 signal AUX7: std_logic_vector (4 downto 0); --Conecta CUENTA del counter con CUENTA del DISPLAY_CONTROL
 signal AUX8: std_logic_vector (3 downto 0); --Conecta CODE del DISPLAY_CONTROL con CODE del DECODIFICADOR
 signal AUX9: std_logic_vector (7 downto 0); --Conecta CONTROL del DISPLAY_CONTROL con CONTROL de la FSM
+signal AUX_CLK: std_logic; --Conecta CLK_OUT del prescaler con la entrada CLK de DISPLAY_CONTROL
 begin 
 
 SYNC: SYNCHRNZR PORT MAP(
@@ -149,7 +156,7 @@ CONTROL_OUT => DIGCTRL);
 
 CONTROL: DISPLAY_CONTROL PORT MAP(
 CUENTA => AUX7,
-CLK => CLK,
+CLK => AUX_CLK,
 CODE => AUX8,
 CONTROL => AUX9);
 
@@ -159,5 +166,9 @@ CUENTA_LEDS => SEGMENTOS);
 
 LED_AUX5 <= PAGAR;
 LED_RESET <= RESET;
+
+CLK_DIV: PRESCALER PORT MAP(
+CLK => CLK,
+CLK_OUT => AUX_CLK);
 
 end Estructural;
