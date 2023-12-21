@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Thu Dec 21 15:27:39 2023
+| Date         : Thu Dec 21 17:06:16 2023
 | Host         : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command      : report_drc -file MAQ_EXP_drc_routed.rpt -pb MAQ_EXP_drc_routed.pb -rpx MAQ_EXP_drc_routed.rpx
 | Design       : MAQ_EXP
@@ -49,12 +49,12 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net CTR/PAGO_OK_SIG_reg/G0 is a gated clock net sourced by a combinational pin CTR/PAGO_OK_SIG_reg/L3_2/O, cell CTR/PAGO_OK_SIG_reg/L3_2 (in CTR/PAGO_OK_SIG_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net CTR/ERROR_SIG_reg/G0 is a gated clock net sourced by a combinational pin CTR/ERROR_SIG_reg/L3_2/O, cell CTR/ERROR_SIG_reg/L3_2 (in CTR/ERROR_SIG_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net CTR/gtOp is a gated clock net sourced by a combinational pin CTR/ERROR_SIG_reg_i_1/O, cell CTR/ERROR_SIG_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net CTR/PAGO_OK_SIG_reg/G0 is a gated clock net sourced by a combinational pin CTR/PAGO_OK_SIG_reg/L3_2/O, cell CTR/PAGO_OK_SIG_reg/L3_2 (in CTR/PAGO_OK_SIG_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

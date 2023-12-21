@@ -32,7 +32,8 @@ entity COUNTER is
   MONEDAS: in std_logic_vector(3 downto 0);
   TIPO_REFRESCO: in std_logic;
   ERROR: out std_logic;
-  PAGO_OK: out std_logic
+  PAGO_OK: out std_logic;
+  CUENTA_LEDS: out std_logic_vector(4 downto 0)
   );
   
 end COUNTER;
@@ -68,13 +69,16 @@ process(CLK, RESET)
             PAGO_OK_SIG <= '0';
         elsif CUENTA_SIG = "01010" then
             PAGO_OK_SIG <= '1'; -- He introducido lo correcto
+            ERROR_SIG <= '0';
         elsif CUENTA_SIG < "01010" then
-            PAGO_OK_SIG <= '0'; -- No he metido suficiente 
+            PAGO_OK_SIG <= '0';
+            ERROR_SIG <= '0'; -- No he metido suficiente 
         end if;   
         
 end process;
  
 ERROR <= ERROR_SIG;
 PAGO_OK <= PAGO_OK_SIG;
+CUENTA_LEDS <= CUENTA_SIG;
 
 end Behavioral;

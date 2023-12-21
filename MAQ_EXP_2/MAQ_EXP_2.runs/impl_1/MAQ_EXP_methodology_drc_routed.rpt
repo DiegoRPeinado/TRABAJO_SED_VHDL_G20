@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Thu Dec 21 15:27:40 2023
+| Date         : Thu Dec 21 17:06:16 2023
 | Host         : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command      : report_methodology -file MAQ_EXP_methodology_drc_routed.rpt -pb MAQ_EXP_methodology_drc_routed.pb -rpx MAQ_EXP_methodology_drc_routed.rpx
 | Design       : MAQ_EXP
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 30
+             Violations found: 48
 +-----------+------------------+--------------------------------+------------+
 | Rule      | Severity         | Description                    | Violations |
 +-----------+------------------+--------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 25         |
-| LUTAR-1   | Warning          | LUT drives async reset alert   | 2          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 41         |
+| LUTAR-1   | Warning          | LUT drives async reset alert   | 4          |
 | TIMING-20 | Warning          | Non-clocked latch              | 2          |
 | LATCH-1   | Advisory         | Existing latches in the design | 1          |
 +-----------+------------------+--------------------------------+------------+
@@ -112,67 +112,159 @@ Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_1_MONEDAS_reg[0]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_1_MONEDAS_reg[1]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_1_MONEDAS_reg[2]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_1_MONEDAS_reg[3]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_1_PAGAR_reg/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_2_MONEDAS_reg[0]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_2_MONEDAS_reg[1]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_2_MONEDAS_reg[2]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_DIGSEL_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin SYNC/SREG_2_MONEDAS_reg[3]/C is not reached by a timing clock
+The clock pin SYNC/SREG_1_MONEDAS_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_1_MONEDAS_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_1_MONEDAS_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_1_MONEDAS_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_1_PAGAR_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_DIGSEL_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_MONEDAS_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_MONEDAS_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_MONEDAS_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin SYNC/SREG_2_MONEDAS_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
 The clock pin SYNC/SREG_2_PAGAR_reg/C is not reached by a timing clock
 Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell CTR/ERROR_SIG_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) CTR/PAGO_OK_SIG_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell CTR/CUENTA_SIG[4]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) CTR/CUENTA_SIG_reg[0]/CLR, CTR/CUENTA_SIG_reg[1]/CLR,
+CTR/CUENTA_SIG_reg[2]/CLR, CTR/CUENTA_SIG_reg[3]/CLR
+CTR/CUENTA_SIG_reg[4]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell CTR/PAGO_OK_SIG_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) CTR/PAGO_OK_SIG_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell CTR/ERROR_SIG_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) CTR/ERROR_SIG_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell CTR/ERROR_SIG_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) CTR/ERROR_SIG_reg/PRE, CTR/PAGO_OK_SIG_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell CTR/PAGO_OK_SIG_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) CTR/PAGO_OK_SIG_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch CTR/ERROR_SIG_reg cannot be properly analyzed as its control pin CTR/ERROR_SIG_reg/G is not reached by a timing clock
+The latch CTR/ERROR_SIG_reg/L7 (in CTR/ERROR_SIG_reg macro) cannot be properly analyzed as its control pin CTR/ERROR_SIG_reg/L7/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning

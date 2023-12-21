@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Dec 21 15:25:31 2023
-# Process ID: 13272
+# Start of session at: Thu Dec 21 17:04:21 2023
+# Process ID: 14744
 # Current directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.runs/synth_1
 # Command line: vivado.exe -log MAQ_EXP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MAQ_EXP.tcl
 # Log file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.runs/synth_1/MAQ_EXP.vds
@@ -12,7 +12,7 @@
 # Running On: LAPTOP-9VF0APCD, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 8320 MB
 #-----------------------------------------------------------
 source MAQ_EXP.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 460.758 ; gain = 197.254
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 461.867 ; gain = 200.109
 Command: read_checkpoint -auto_incremental -incremental C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,23 +25,23 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3352
+INFO: [Synth 8-7075] Helper process launched with PID 2412
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.062 ; gain = 410.223
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1295.461 ; gain = 411.324
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MAQ_EXP' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:38]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd:34' bound to instance 'SYNC' of component 'SYNCHRNZR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:90]
-INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd:44]
-INFO: [Synth 8-3491] module 'EDGE_DETECTOR' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/EDGE_DETECTOR.vhd:25' bound to instance 'EDGE' of component 'EDGE_DETECTOR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'MAQ_EXP' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:42]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd:34' bound to instance 'SYNC' of component 'SYNCHRNZR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd:46]
+INFO: [Synth 8-3491] module 'EDGE_DETECTOR' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/EDGE_DETECTOR.vhd:25' bound to instance 'EDGE' of component 'EDGE_DETECTOR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:116]
 INFO: [Synth 8-638] synthesizing module 'EDGE_DETECTOR' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/EDGE_DETECTOR.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'EDGE_DETECTOR' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/EDGE_DETECTOR.vhd:33]
-INFO: [Synth 8-3491] module 'COUNTER' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:27' bound to instance 'CTR' of component 'COUNTER' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'COUNTER' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:40]
-WARNING: [Synth 8-614] signal 'CE' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:47]
-WARNING: [Synth 8-614] signal 'CUENTA_SIG' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'COUNTER' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:40]
-INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:4' bound to instance 'MAQ_ESTADOS' of component 'FSM' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:113]
+INFO: [Synth 8-3491] module 'COUNTER' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:27' bound to instance 'CTR' of component 'COUNTER' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'COUNTER' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:41]
+WARNING: [Synth 8-614] signal 'CE' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:48]
+WARNING: [Synth 8-614] signal 'CUENTA_SIG' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'COUNTER' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:41]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:4' bound to instance 'MAQ_ESTADOS' of component 'FSM' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:131]
 INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:16]
 WARNING: [Synth 8-614] signal 'CURRENT_STATE' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:33]
 WARNING: [Synth 8-614] signal 'PAGAR' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:33]
@@ -49,61 +49,61 @@ WARNING: [Synth 8-614] signal 'PAGO_OK' is read in the process but is not in the
 WARNING: [Synth 8-614] signal 'ERROR_COUNTER' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:33]
 WARNING: [Synth 8-614] signal 'RESET' is read in the process but is not in the sensitivity list [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'FSM' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'MAQ_EXP' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:38]
+INFO: [Synth 8-3491] module 'decoder' declared at 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DECODER.vhd:28' bound to instance 'DECODE' of component 'DECODER' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'decoder' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DECODER.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DECODER.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'MAQ_EXP' (0#1) [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd:42]
 WARNING: [Synth 8-7129] Port TIPO_REFRESCO in module FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port TIPO_REFRESCO in module COUNTER is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1384.574 ; gain = 501.734
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1386.543 ; gain = 502.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1384.574 ; gain = 501.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1386.543 ; gain = 502.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1384.574 ; gain = 501.734
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1386.543 ; gain = 502.406
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1384.574 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1386.543 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/Constraints/Nexys4DDR_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'LED_RESET'. [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/Constraints/Nexys4DDR_Master.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/Constraints/Nexys4DDR_Master.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/Constraints/Nexys4DDR_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/Constraints/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MAQ_EXP_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/MAQ_EXP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1428.191 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1480.621 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1428.191 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1480.621 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'CURRENT_STATE_reg' in module 'FSM'
-WARNING: [Synth 8-327] inferring latch for variable 'ERROR_SIG_reg' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:67]
-WARNING: [Synth 8-327] inferring latch for variable 'PAGO_OK_SIG_reg' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'ERROR_SIG_reg' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'PAGO_OK_SIG_reg' [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:69]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -114,7 +114,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'PAGO_OK_SIG_reg' [C:/Users/
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CURRENT_STATE_reg' using encoding 'sequential' in module 'FSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -123,10 +123,12 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input    5 Bit       Adders := 1     
 +---Registers : 
+	                8 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 4     
 	                1 Bit    Registers := 4     
 +---Muxes : 
+	   2 Input    7 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 2     
 	   4 Input    4 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 1     
@@ -151,25 +153,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port TIPO_REFRESCO in module MAQ_EXP is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -187,37 +189,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -238,39 +240,36 @@ Report Cell Usage:
 |3     |LUT2 |     4|
 |4     |LUT3 |     3|
 |5     |LUT4 |     3|
-|6     |LUT5 |     5|
+|6     |LUT5 |    14|
 |7     |LUT6 |     8|
 |8     |FDCE |     7|
-|9     |FDRE |    18|
-|10    |LD   |     1|
-|11    |LDCP |     1|
-|12    |IBUF |     7|
-|13    |OBUF |     7|
+|9     |FDRE |    34|
+|10    |LDCP |     2|
+|11    |IBUF |    15|
+|12    |OBUF |    23|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1428.191 ; gain = 501.734
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1428.191 ; gain = 545.352
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1480.621 ; gain = 502.406
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1480.621 ; gain = 596.484
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1428.191 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1480.621 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1428.191 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1480.621 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
-  LD => LDCE: 1 instance 
-  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 1 instance 
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 2 instances
 
-Synth Design complete | Checksum: a3c584a2
+Synth Design complete | Checksum: fba66e94
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 14 Warnings, 1 Critical Warnings and 0 Errors encountered.
+40 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:47 . Memory (MB): peak = 1428.191 ; gain = 942.598
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.621 ; gain = 993.602
 INFO: [Common 17-1381] The checkpoint 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.runs/synth_1/MAQ_EXP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MAQ_EXP_utilization_synth.rpt -pb MAQ_EXP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 21 15:26:28 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 21 17:05:05 2023...

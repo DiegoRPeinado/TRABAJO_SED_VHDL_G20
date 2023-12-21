@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1703168728" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/MAQ_EXP.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1703174658" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/MAQ_EXP.dcp">
   <File Type="PA-TCL" Name="MAQ_EXP.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="MAQ_EXP_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="MAQ_EXP_reports.tcl"/>
@@ -12,6 +12,12 @@
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/COUNTER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DECODER.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
