@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "MAQ_EXP_tb_behav" "xil_defaultlib.MAQ_EXP_tb" -log "elaborate.log" 
