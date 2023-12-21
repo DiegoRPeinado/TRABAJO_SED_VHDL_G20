@@ -33,8 +33,8 @@ entity MAQ_EXP is
            ESTADOS: out std_logic_vector (3 downto 0);
            LED_AUX5: out STD_LOGIC;
            LED_RESET: out STD_LOGIC;
-           SEGMENTOS: out STD_LOGIC_VECTOR(6 downto 0));
-           
+           SEGMENTOS: out STD_LOGIC_VECTOR(6 downto 0);
+           DIGCTRL: out STD_LOGIC_VECTOR(7 downto 0));
 end MAQ_EXP;
 
 architecture Estructural of MAQ_EXP is
@@ -66,7 +66,7 @@ component COUNTER is
     MONEDAS : in STD_LOGIC_VECTOR (3 downto 0);
     PAGO_OK : out STD_LOGIC;
     ERROR : out STD_LOGIC;
-    CUENTA_LEDS: out STD_LOGIC_VECTOR (4 downto 0));
+    CUENTA: out STD_LOGIC_VECTOR (4 downto 0));
 end component;
 
 component FSM is
@@ -76,16 +76,26 @@ component FSM is
     PAGO_OK : in STD_LOGIC;
     ERROR_COUNTER : in STD_LOGIC;
     TIPO_REFRESCO : in STD_LOGIC;
+    CONTROL_IN : in STD_LOGIC_VECTOR (7 downto 0);
     RESET : in STD_LOGIC;
     ERROR : out STD_LOGIC;
     REFRESCO_OUT : out STD_LOGIC;
-    ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0));
+    ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0);
+    CONTROL_OUT : out STD_LOGIC_VECTOR (7 downto 0));
+end component;
+
+component DISPLAY_CONTROL is
+    Port( 
+    CUENTA : in STD_LOGIC_VECTOR (4 downto 0);
+    CLK : in STD_LOGIC;
+    CODE : out STD_LOGIC_VECTOR (3 downto 0);
+    CONTROL : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
 component DECODER is
-PORT (
-CUENTA_IN : IN std_logic_vector(4 DOWNTO 0);
-CUENTA_LEDS : OUT std_logic_vector(6 DOWNTO 0)
+   PORT (
+   CODE : IN std_logic_vector(3 DOWNTO 0);
+   CUENTA_LEDS : OUT std_logic_vector(6 DOWNTO 0)
 );
 end component;
 
@@ -95,8 +105,10 @@ signal AUX3: std_logic; --Conecta PAGO_OK del COUNTER con la FSM
 signal AUX4: std_logic; --Conec0ta ERROR del COUNTER con la FSM
 signal AUX5: std_logic; --Conecta PAGAR del SYNC con el COUNTER y la FSM
 signal AUX6: std_logic; --Conecta TIPO_TEFRSCO del SYNC con el COUNTER y la FSM
-signal AUX7: std_logic_vector (4 downto 0); --Conecta cuenta_leds de contador con cuenta_in del decodificador
-begin
+signal AUX7: std_logic_vector (4 downto 0); --Conecta CUENTA del counter con CUENTA del DISPLAY_CONTROL
+signal AUX8: std_logic_vector (3 downto 0); --Conecta CODE del DISPLAY_CONTROL con CODE del DECODIFICADOR
+signal AUX9: std_logic_vector (7 downto 0); --Conecta CONTROL del DISPLAY_CONTROL con CONTROL de la FSM
+begin 
 
 SYNC: SYNCHRNZR PORT MAP(
 CLK => CLK,
@@ -120,21 +132,29 @@ TIPO_REFRESCO => AUX6,
 MONEDAS => AUX2,
 PAGO_OK => AUX3,
 ERROR => AUX4,
-CUENTA_LEDS => AUX7);
+CUENTA => AUX7);
 
 MAQ_ESTADOS: FSM PORT MAP(
 CLK => CLK,
-PAGAR => AUX5, --cambiar
+PAGAR => AUX5, 
 PAGO_OK => AUX3,
 ERROR_COUNTER => AUX4,
 TIPO_REFRESCO => AUX6,
+CONTROL_IN => AUX9,
 RESET => RESET,
 ERROR => ERROR,
 REFRESCO_OUT => REFRESCO_OUT,
-ESTADOS_OUT => ESTADOS);
+ESTADOS_OUT => ESTADOS,
+CONTROL_OUT => DIGCTRL);
+
+CONTROL: DISPLAY_CONTROL PORT MAP(
+CUENTA => AUX7,
+CLK => CLK,
+CODE => AUX8,
+CONTROL => AUX9);
 
 DECODE: DECODER PORT MAP(
-CUENTA_IN => AUX7,
+CODE => AUX8,
 CUENTA_LEDS => SEGMENTOS);
 
 LED_AUX5 <= PAGAR;

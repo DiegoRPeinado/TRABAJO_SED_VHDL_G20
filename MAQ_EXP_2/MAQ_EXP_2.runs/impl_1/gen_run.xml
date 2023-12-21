@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1703174658">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1703183596">
   <File Type="ROUTE-PWR" Name="MAQ_EXP_power_routed.rpt"/>
   <File Type="PA-TCL" Name="MAQ_EXP.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="MAQ_EXP_power_summary_routed.pb"/>
@@ -93,6 +93,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/DECODER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DISPLAY_CONTROL.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

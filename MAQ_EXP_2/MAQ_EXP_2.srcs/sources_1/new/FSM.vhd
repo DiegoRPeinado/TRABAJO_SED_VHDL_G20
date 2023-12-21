@@ -7,10 +7,12 @@ entity FSM is
            PAGO_OK : in STD_LOGIC;
            ERROR_COUNTER : in STD_LOGIC;
            TIPO_REFRESCO : in STD_LOGIC;
+           CONTROL_IN : in STD_LOGIC_VECTOR (7 downto 0);
            RESET : in STD_LOGIC;
            ERROR : out STD_LOGIC;
            REFRESCO_OUT : out STD_LOGIC;
-           ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0));
+           ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0);
+           CONTROL_OUT : out STD_LOGIC_VECTOR (7 downto 0));
 end FSM;
 
 architecture Behavioral of FSM is
@@ -62,18 +64,22 @@ begin
                 ERROR <= '0';
                 REFRESCO_OUT <= '0';
                 ESTADOS_OUT <= "0001";
+                CONTROL_OUT <="11111111";
             when S1 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '0';
                 ESTADOS_OUT  <= "0010";
+                CONTROL_OUT <= CONTROL_IN;
             when S2 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '1';
                 ESTADOS_OUT <= "0100";
+                CONTROL_OUT <= "11111111";
             when S3 =>
                 ERROR <= '1';
                 REFRESCO_OUT <= '0';
                 ESTADOS_OUT <= "1000";
+                CONTROL_OUT <= "11111111";
         end case;
     end process;
 

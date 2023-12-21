@@ -33,7 +33,7 @@ entity COUNTER is
   TIPO_REFRESCO: in std_logic;
   ERROR: out std_logic;
   PAGO_OK: out std_logic;
-  CUENTA_LEDS: out std_logic_vector(4 downto 0)
+  CUENTA: out std_logic_vector(4 downto 0)
   );
   
 end COUNTER;
@@ -48,7 +48,7 @@ begin
 process(CLK, RESET)
     --variable CUENTA: std_logic_vector(3 downto 0) := "00000";
     begin 
-        if (RESET='0') then 
+        if (RESET='0' OR CE='0') then 
             CUENTA_SIG <="00000";  -- Inicializo la cuenta
         elsif rising_edge(CLK) and CE='1' then
           -- Suma la moneda introducida al contador CUENTA_SIG
@@ -79,6 +79,6 @@ end process;
  
 ERROR <= ERROR_SIG;
 PAGO_OK <= PAGO_OK_SIG;
-CUENTA_LEDS <= CUENTA_SIG;
+CUENTA <= CUENTA_SIG;
 
 end Behavioral;

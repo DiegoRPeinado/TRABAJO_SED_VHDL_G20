@@ -36,7 +36,10 @@ architecture bench of TESTBENCH is
              ERROR : out STD_LOGIC;
              REFRESCO_OUT : out STD_LOGIC;
              ESTADOS: out std_logic_vector (3 downto 0);
-             LED_AUX5: out STD_LOGIC);
+             LED_AUX5: out STD_LOGIC;
+             LED_RESET: out STD_LOGIC;
+             SEGMENTOS: out STD_LOGIC_VECTOR(6 downto 0);
+             DIGCTRL: out STD_LOGIC_VECTOR(7 downto 0));
   end component;
 
   signal CLK: STD_LOGIC;
@@ -48,6 +51,9 @@ architecture bench of TESTBENCH is
   signal REFRESCO_OUT: STD_LOGIC;
   signal ESTADOS: std_logic_vector (3 downto 0);
   signal LED_AUX5: STD_LOGIC;
+  signal LED_RESET: STD_LOGIC;
+  signal SEGMENTOS: STD_LOGIC_VECTOR(6 downto 0);
+  signal DIGCTRL: STD_LOGIC_VECTOR(7 downto 0);
   
   constant clock_period: time := 10 ns;
 
@@ -61,7 +67,10 @@ begin
                           ERROR         => ERROR,
                           REFRESCO_OUT  => REFRESCO_OUT,
                           ESTADOS       => ESTADOS,
-                          LED_AUX5      => LED_AUX5);
+                          LED_AUX5      => LED_AUX5,
+                          LED_RESET     => LED_RESET,
+                          SEGMENTOS     => SEGMENTOS,
+                          DIGCTRL       => DIGCTRL);
                           
    CLK_TREATMENT: process
    begin
@@ -97,6 +106,7 @@ begin
     wait for clock_period*2;
       MONEDAS <= "0100";
     wait for clock_period*2;
+    PAGAR <= '0';
     
     wait for clock_period * 8;
 
