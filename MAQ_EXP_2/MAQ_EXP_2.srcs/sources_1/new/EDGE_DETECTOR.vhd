@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 21.12.2023 11:18:35
+-- Create Date: 08.12.2023 14:35:01
 -- Design Name: 
 -- Module Name: EDGE_DETECTOR - Behavioral
 -- Project Name: 
@@ -22,22 +22,32 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity EDGE_DETECTOR is
---  Port ( );
+    Port (
+      CLK : in STD_LOGIC;
+      MONEDAS_IN : in STD_LOGIC_VECTOR(3 downto 0); -- 6 bits de se?ales de entrada.
+      EDGE_MONEDAS : out STD_LOGIC_VECTOR(3 downto 0) -- Salida de detecci?n de flanco.
+    );
 end EDGE_DETECTOR;
 
 architecture Behavioral of EDGE_DETECTOR is
-
-begin
-
-
+    
+    signal previous_data : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+	begin
+    process(CLK)
+    
+    	begin
+        if rising_edge (CLK) then
+          if MONEDAS_IN /= previous_data then
+              EDGE_MONEDAS <= MONEDAS_IN;
+          else
+              EDGE_MONEDAS <= "0000";
+          end if;
+          previous_data <= MONEDAS_IN;
+        end if;
+        
+    end process;
 end Behavioral;
+
+
+

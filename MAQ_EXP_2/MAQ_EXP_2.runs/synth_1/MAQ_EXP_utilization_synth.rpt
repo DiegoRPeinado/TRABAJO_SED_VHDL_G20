@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Thu Dec 21 11:29:05 2023
+| Date         : Thu Dec 21 15:26:28 2023
 | Host         : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MAQ_EXP_utilization_synth.rpt -pb MAQ_EXP_utilization_synth.pb
 | Design       : MAQ_EXP
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   15 |     0 |          0 |       210 |  7.14 |
+| Bonded IOB                  |   14 |     0 |          0 |       210 |  6.67 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -149,8 +149,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   18 |        Flop & Latch |
-| OBUF     |    8 |                  IO |
 | LUT6     |    8 |                 LUT |
+| OBUF     |    7 |                  IO |
 | IBUF     |    7 |                  IO |
 | FDCE     |    7 |        Flop & Latch |
 | LUT5     |    5 |                 LUT |

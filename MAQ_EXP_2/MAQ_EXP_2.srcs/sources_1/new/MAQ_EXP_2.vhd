@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 21.12.2023 15:20:43
+-- Create Date: 21.12.2023 15:11:40
 -- Design Name: 
--- Module Name: MAQ_EXP - Structural
+-- Module Name: MAQ_EXP_2 - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 

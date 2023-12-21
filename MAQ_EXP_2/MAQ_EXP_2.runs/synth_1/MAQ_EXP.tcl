@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/diego/OneDrive/Desktop/PROYECTOSED/MAQ_EXP_2/MAQ_EXP_2.runs/synth_1/MAQ_EXP.tcl"
+  variable script "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.runs/synth_1/MAQ_EXP.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,33 +70,27 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/.Xil/Vivado-2968-LAPTOP-9VF0APCD/incrSyn
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/diego/OneDrive/Desktop/PROYECTOSED/MAQ_EXP_2/MAQ_EXP_2.cache/wt [current_project]
-set_property parent.project_path C:/Users/diego/OneDrive/Desktop/PROYECTOSED/MAQ_EXP_2/MAQ_EXP_2.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.cache/wt [current_project]
+set_property parent.project_path C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/diego/OneDrive/Desktop/PROYECTOSED/MAQ_EXP_2/MAQ_EXP_2.cache/ip [current_project]
+set_property ip_output_repo c:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/COUNTER.vhd
-  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/EDGE_DETECTOR.vhd
-  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/FSM.vhd
-  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/SYNCHRONIZER.vhd
-  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MaquinaExp_G20/MaquinaExp_G20.srcs/sources_1/new/MAQ_EXP.vhd
+  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd
+  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/EDGE_DETECTOR.vhd
+  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd
+  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd
+  C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -111,6 +105,8 @@ read_xdc C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/Constraints/Nex
 set_property used_in_implementation false [get_files C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/Constraints/Nexys4DDR_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/utils_1/imports/synth_1/MAQ_EXP.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

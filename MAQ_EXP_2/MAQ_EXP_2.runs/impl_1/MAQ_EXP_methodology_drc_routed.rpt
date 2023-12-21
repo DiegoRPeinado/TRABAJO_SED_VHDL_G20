@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Thu Dec 21 11:30:28 2023
+| Date         : Thu Dec 21 15:27:40 2023
 | Host         : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command      : report_methodology -file MAQ_EXP_methodology_drc_routed.rpt -pb MAQ_EXP_methodology_drc_routed.pb -rpx MAQ_EXP_methodology_drc_routed.rpx
 | Design       : MAQ_EXP
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 31
+             Violations found: 30
 +-----------+------------------+--------------------------------+------------+
 | Rule      | Severity         | Description                    | Violations |
 +-----------+------------------+--------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 26         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 25         |
 | LUTAR-1   | Warning          | LUT drives async reset alert   | 2          |
 | TIMING-20 | Warning          | Non-clocked latch              | 2          |
 | LATCH-1   | Advisory         | Existing latches in the design | 1          |
@@ -158,11 +158,6 @@ Related violations: <none>
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
 The clock pin SYNC/SREG_2_PAGAR_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#26 Critical Warning
-Non-clocked sequential cell  
-The clock pin SYNC/SREG_2_PAGAR_reg_lopt_replica/C is not reached by a timing clock
 Related violations: <none>
 
 LUTAR-1#1 Warning
