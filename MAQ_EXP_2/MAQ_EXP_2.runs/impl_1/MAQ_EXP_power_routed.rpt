@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Thu Dec 21 19:34:25 2023
+| Date             : Fri Dec 22 13:26:10 2023
 | Host             : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command          : report_power -file MAQ_EXP_power_routed.rpt -pb MAQ_EXP_power_summary_routed.pb -rpx MAQ_EXP_power_routed.rpx
 | Design           : MAQ_EXP
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 16.187 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 24.692 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 15.794                           |
-| Device Static (W)        | 0.393                            |
+| Dynamic (W)              | 23.895                           |
+| Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 11.1                             |
-| Junction Temperature (C) | 98.9                             |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -52,15 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.223 |       95 |       --- |             --- |
-|   LUT as Logic |     0.206 |       34 |     63400 |            0.05 |
-|   Register     |     0.011 |       33 |    126800 |            0.03 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       13 |       --- |             --- |
-| Signals        |     0.281 |       75 |       --- |             --- |
-| I/O            |    15.289 |       30 |       210 |           14.29 |
-| Static Power   |     0.393 |          |           |                 |
-| Total          |    16.187 |          |           |                 |
+| Slice Logic    |     0.325 |      160 |       --- |             --- |
+|   LUT as Logic |     0.280 |       62 |     63400 |            0.10 |
+|   Register     |     0.027 |       62 |    126800 |            0.05 |
+|   CARRY4       |     0.012 |        5 |     15850 |            0.03 |
+|   BUFG         |     0.006 |        2 |        32 |            6.25 |
+|   Others       |     0.000 |       15 |       --- |             --- |
+| Signals        |     0.467 |      113 |       --- |             --- |
+| I/O            |    23.103 |       31 |       210 |           14.76 |
+| Static Power   |     0.797 |          |           |                 |
+| Total          |    24.692 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.777 |       0.528 |      0.249 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.608 |       0.559 |      0.049 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     4.325 |       4.321 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.379 |       0.816 |      0.563 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.939 |       0.846 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     6.536 |       6.532 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.007 |       0.000 |      0.007 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -137,15 +138,16 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| MAQ_EXP             |    15.794 |
-|   CONTROL           |     0.075 |
-|   CTR               |     0.092 |
-|     ERROR_SIG_reg   |     0.005 |
-|     PAGO_OK_SIG_reg |     0.006 |
-|   DECODE            |     0.071 |
-|   EDGE              |     0.063 |
-|   MAQ_ESTADOS       |     0.128 |
-|   SYNC              |     0.039 |
+| MAQ_EXP             |    23.895 |
+|   CLK_DIV           |     0.087 |
+|   CONTROL           |     0.210 |
+|   CTR               |     0.079 |
+|     ERROR_SIG_reg   |     0.008 |
+|     PAGO_OK_SIG_reg |     0.005 |
+|   DECODE            |     0.220 |
+|   EDGE              |     0.060 |
+|   MAQ_ESTADOS       |     0.061 |
+|   SYNC              |     0.038 |
 +---------------------+-----------+
 
 

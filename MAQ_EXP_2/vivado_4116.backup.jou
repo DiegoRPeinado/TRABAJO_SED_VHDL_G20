@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Dec 21 23:18:59 2023
+# Process ID: 4116
+# Current directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8172 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MAQ_EXP_2\MAQ_EXP_2.xpr
+# Log file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/vivado.log
+# Journal file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2\vivado.jou
+# Running On: LAPTOP-9VF0APCD, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 8320 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source TESTBENCH.tcl
+close [ open C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/PRESCALER.vhd w ]
+add_files C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/PRESCALER.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source TESTBENCH.tcl
+close_sim

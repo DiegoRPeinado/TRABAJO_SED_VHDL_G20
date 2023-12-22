@@ -30,11 +30,11 @@ entity MAQ_EXP is
            TIPO_REFRESCO : in STD_LOGIC;
            ERROR : out STD_LOGIC;
            REFRESCO_OUT : out STD_LOGIC;
-           ESTADOS: out std_logic_vector (3 downto 0);
+           ESTADOS: out STD_LOGIC_VECTOR (3 downto 0);
            LED_AUX5: out STD_LOGIC;
            LED_RESET: out STD_LOGIC;
            SEGMENTOS: out STD_LOGIC_VECTOR(6 downto 0);
-           DIGCTRL: out STD_LOGIC_VECTOR(7 downto 0));
+           DIGCTRL: out STD_LOGIC_VECTOR(8 downto 0));
 end MAQ_EXP;
 
 architecture Estructural of MAQ_EXP is
@@ -76,12 +76,12 @@ component FSM is
     PAGO_OK : in STD_LOGIC;
     ERROR_COUNTER : in STD_LOGIC;
     TIPO_REFRESCO : in STD_LOGIC;
-    CONTROL_IN : in STD_LOGIC_VECTOR (7 downto 0);
+    CONTROL_IN : in STD_LOGIC_VECTOR (8 downto 0);
     RESET : in STD_LOGIC;
     ERROR : out STD_LOGIC;
     REFRESCO_OUT : out STD_LOGIC;
     ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0);
-    CONTROL_OUT : out STD_LOGIC_VECTOR (7 downto 0));
+    CONTROL_OUT : out STD_LOGIC_VECTOR (8 downto 0));
 end component;
 
 component DISPLAY_CONTROL is
@@ -89,7 +89,7 @@ component DISPLAY_CONTROL is
     CUENTA : in STD_LOGIC_VECTOR (4 downto 0);
     CLK : in STD_LOGIC;
     CODE : out STD_LOGIC_VECTOR (3 downto 0);
-    CONTROL : out STD_LOGIC_VECTOR (7 downto 0));
+    CONTROL : out STD_LOGIC_VECTOR (8 downto 0));
 end component;
 
 component DECODER is
@@ -113,8 +113,10 @@ signal AUX5: std_logic; --Conecta PAGAR del SYNC con el COUNTER y la FSM
 signal AUX6: std_logic; --Conecta TIPO_TEFRSCO del SYNC con el COUNTER y la FSM
 signal AUX7: std_logic_vector (4 downto 0); --Conecta CUENTA del counter con CUENTA del DISPLAY_CONTROL
 signal AUX8: std_logic_vector (3 downto 0); --Conecta CODE del DISPLAY_CONTROL con CODE del DECODIFICADOR
-signal AUX9: std_logic_vector (7 downto 0); --Conecta CONTROL del DISPLAY_CONTROL con CONTROL de la FSM
+signal AUX9: std_logic_vector (8 downto 0); --Conecta CONTROL del DISPLAY_CONTROL con CONTROL de la FSM
 signal AUX_CLK: std_logic; --Conecta CLK_OUT del prescaler con la entrada CLK de DISPLAY_CONTROL
+--signal SEGMENTOS: std_logic_vector(6 downto 0); --Salida del DECODER que le llega al display)
+--signal DIGCTRL:  std_logic_vector(8 downto 0); --Salida de la FSM que controla que display se ha encendido y el punto decimal
 begin 
 
 SYNC: SYNCHRNZR PORT MAP(

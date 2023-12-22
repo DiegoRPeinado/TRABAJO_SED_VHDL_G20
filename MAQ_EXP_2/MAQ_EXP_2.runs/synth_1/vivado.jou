@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Dec 21 19:32:26 2023
-# Process ID: 13984
+# Start of session at: Fri Dec 22 13:23:39 2023
+# Process ID: 11056
 # Current directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.runs/synth_1
 # Command line: vivado.exe -log MAQ_EXP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MAQ_EXP.tcl
 # Log file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.runs/synth_1/MAQ_EXP.vds

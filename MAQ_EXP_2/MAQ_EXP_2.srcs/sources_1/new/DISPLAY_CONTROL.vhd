@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -35,11 +37,12 @@ entity DISPLAY_CONTROL is
     Port ( CUENTA : in STD_LOGIC_VECTOR (4 downto 0);
            CLK : in STD_LOGIC;
            CODE : out STD_LOGIC_VECTOR (3 downto 0);
-           CONTROL : out STD_LOGIC_VECTOR (7 downto 0));
+           CONTROL : out STD_LOGIC_VECTOR (8 downto 0));
 end DISPLAY_CONTROL;
 
 architecture Behavioral of DISPLAY_CONTROL is
 signal INTERNAL_CONTROL : STD_LOGIC_VECTOR (7 downto 0):="11111110";
+signal DP : STD_LOGIC := '0';
 begin
 process(CLK)
 
@@ -48,24 +51,36 @@ begin
         CASE INTERNAL_CONTROL IS 
             WHEN "11111110" =>
                 INTERNAL_CONTROL <= "11111101";
-                CODE <= "0000"; -- SIEMPRE VALE 0 EL PRIMER SEGMENTO (A LA DERECHA)
-            WHEN "11111101" =>
-                INTERNAL_CONTROL <= "11111011";
-                IF CUENTA > "01001" THEN
-                    CODE <= "0000";
+                IF CUENTA < "01010" THEN
+                    CODE <= "1010" - CUENTA(3 downto 0);
                 ELSE CODE <= CUENTA (3 DOWNTO 0);
                 END IF;
-            WHEN "11111011" =>
-                INTERNAL_CONTROL <= "11110111";
-                IF CUENTA > "01001" THEN
+                DP <= '1';
+            WHEN "11111101" =>
+                INTERNAL_CONTROL <= "11111011";
+              IF CUENTA = "00000" THEN
                     CODE <= "0001";
                 ELSE CODE <= "0000";
                 END IF;
+                DP <= '0'; 
+            WHEN "11111011" =>
+                INTERNAL_CONTROL <= "11101111";
+                CODE <= "0000"; 
+                DP <= '1';
+            WHEN "11101111" =>
+                INTERNAL_CONTROL <= "11011111";
+                CODE <= "0000"; 
+                DP <= '1';
+            WHEN "11011111" =>
+                INTERNAL_CONTROL <= "10111111";
+                CODE <= "0001"; 
+                DP <= '1';
             WHEN OTHERS =>
                 INTERNAL_CONTROL <= "11111110";
                 CODE <= "0000";
+                DP <= '1';
         END CASE;
     END IF; 
-CONTROL <= INTERNAL_CONTROL;                 
+CONTROL <= DP & INTERNAL_CONTROL;                 
 end process;
 end Behavioral;

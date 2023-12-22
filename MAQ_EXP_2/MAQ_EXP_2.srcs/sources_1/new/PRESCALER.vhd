@@ -38,7 +38,7 @@ entity PRESCALER is
 end PRESCALER;
 
 architecture Behavioral of PRESCALER is
-signal CLK_BUFFER: STD_LOGIC_VECTOR (3 downto 0):=(others => '0');
+signal CLK_BUFFER: STD_LOGIC_VECTOR (18 downto 0):=(others => '0');
 begin
 
 process (CLK)
