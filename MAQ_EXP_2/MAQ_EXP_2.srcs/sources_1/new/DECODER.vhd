@@ -26,9 +26,13 @@ USE ieee.std_logic_unsigned.ALL;
 
 
 ENTITY decoder IS
+GENERIC(
+     SIZE_CODE: POSITIVE;
+     N_SEGMENTOS: POSITIVE      
+);
 PORT (
-CODE : IN std_logic_vector(3 DOWNTO 0);
-CUENTA_LEDS : OUT std_logic_vector(6 DOWNTO 0)
+    CODE : IN std_logic_vector(SIZE_CODE - 1 DOWNTO 0);
+    CUENTA_LEDS : OUT std_logic_vector(N_SEGMENTOS - 1 DOWNTO 0)
 );
 END ENTITY decoder;
 

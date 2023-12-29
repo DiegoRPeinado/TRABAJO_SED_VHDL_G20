@@ -24,24 +24,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std .ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity COUNTER is
-  Port (
-  CLK: in std_logic;
-  CE: in std_logic;
-  RESET: in std_logic;
-  MONEDAS: in std_logic_vector(3 downto 0);
-  TIPO_REFRESCO: in std_logic;
-  ERROR: out std_logic;
-  PAGO_OK: out std_logic;
-  CUENTA: out std_logic_vector(4 downto 0)
-  );
+entity COUNTER is 
+    Generic(
+        N_MONEDAS: POSITIVE;
+        SIZE_CUENTA: POSITIVE      
+    );
+    Port(
+        CLK: in std_logic;
+        CE: in std_logic;
+        RESET: in std_logic;
+        MONEDAS: in std_logic_vector(N_MONEDAS - 1 downto 0);
+        TIPO_REFRESCO: in std_logic;
+        ERROR: out std_logic;
+        PAGO_OK: out std_logic;
+        CUENTA: out std_logic_vector(SIZE_CUENTA - 1 downto 0)
+   );
   
 end COUNTER;
 
 architecture Behavioral of COUNTER is
     
-    signal CUENTA_SIG: std_logic_vector(4 downto 0) :="00000"; -- va sumando las monedas introducidas
-    signal ERROR_SIG: std_logic :='0';
+    signal CUENTA_SIG: std_logic_vector(SIZE_CUENTA - 1 downto 0) := (OTHERS => '0'); -- va sumando las monedas introducidas
+    signal ERROR_SIG: std_logic;
     signal PAGO_OK_SIG: std_logic;
     
 begin
@@ -49,7 +53,7 @@ process(CLK, RESET)
     --variable CUENTA: std_logic_vector(3 downto 0) := "00000";
     begin 
         if (RESET='0' OR CE='0') then 
-            CUENTA_SIG <="00000";  -- Inicializo la cuenta
+            CUENTA_SIG <= (OTHERS => '0');  -- Inicializo la cuenta
         elsif rising_edge(CLK) and CE='1' then
           -- Suma la moneda introducida al contador CUENTA_SIG
             if MONEDAS = "0001" then 

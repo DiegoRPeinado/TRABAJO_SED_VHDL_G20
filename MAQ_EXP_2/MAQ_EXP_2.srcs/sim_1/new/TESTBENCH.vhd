@@ -28,18 +28,29 @@ end;
 architecture bench of TESTBENCH is
 
   component MAQ_EXP
-      Port ( CLK : in STD_LOGIC;
-             RESET : in STD_LOGIC;
-             PAGAR : in STD_LOGIC;
-             MONEDAS : in STD_LOGIC_VECTOR (3 downto 0);
-             TIPO_REFRESCO : in STD_LOGIC;
-             ERROR : out STD_LOGIC;
-             REFRESCO_OUT : out STD_LOGIC;
-             ESTADOS: out std_logic_vector (3 downto 0);
-             LED_AUX5: out STD_LOGIC;
-             LED_RESET: out STD_LOGIC;
-             SEGMENTOS: out STD_LOGIC_VECTOR(6 downto 0);
-             DIGCTRL: out STD_LOGIC_VECTOR(8 downto 0));
+    Generic(
+        N_MONEDAS: POSITIVE;
+        N_ESTADOS: POSITIVE;
+        N_SEGMENTOS: POSITIVE;
+        N_DISPLAYS: POSITIVE; -- 8 más el punto decimal
+        SIZE_CUENTA: POSITIVE;
+        SIZE_CODE: POSITIVE     
+    );
+    
+    Port(
+        CLK : in STD_LOGIC;
+        RESET : in STD_LOGIC;
+        PAGAR : in STD_LOGIC;
+        MONEDAS : in STD_LOGIC_VECTOR (N_MONEDAS - 1 downto 0);
+        TIPO_REFRESCO : in STD_LOGIC;
+        ERROR : out STD_LOGIC;
+        REFRESCO_OUT : out STD_LOGIC;
+        ESTADOS: out STD_LOGIC_VECTOR (N_ESTADOS - 1 downto 0);
+        LED_AUX5: out STD_LOGIC;
+        LED_RESET: out STD_LOGIC;
+        SEGMENTOS: out STD_LOGIC_VECTOR(N_SEGMENTOS - 1 downto 0);
+        DIGCTRL: out STD_LOGIC_VECTOR(N_DISPLAYS - 1 downto 0)
+     );
   end component;
 
   signal CLK: STD_LOGIC;
@@ -60,7 +71,17 @@ architecture bench of TESTBENCH is
 
 begin
 
-  uut: MAQ_EXP port map ( CLK           => CLK,
+  uut: MAQ_EXP
+                          GENERIC map ( 
+                          N_MONEDAS           => 4,
+                          N_ESTADOS           => 4,
+                          N_SEGMENTOS           => 7,                          
+                          N_DISPLAYS           => 9, 
+                          SIZE_CUENTA           => 5, 
+                          SIZE_CODE           => 4
+                          )  
+                                                  
+                          port map ( CLK           => CLK,
                           RESET         => RESET,
                           PAGAR         => PAGAR,
                           MONEDAS       => MONEDAS,
@@ -71,7 +92,9 @@ begin
                           LED_AUX5      => LED_AUX5,
                           LED_RESET     => LED_RESET,
                           SEGMENTOS     => SEGMENTOS,
-                          DIGCTRL       => DIGCTRL);                       
+                          DIGCTRL       => DIGCTRL
+                          );         
+                                        
    CLK_TREATMENT: process
    begin
 

@@ -14,12 +14,12 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
-Compiling architecture behavioral of entity xil_defaultlib.EDGE_DETECTOR [edge_detector_default]
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [counter_default]
-Compiling architecture behavioral of entity xil_defaultlib.FSM [fsm_default]
-Compiling architecture behavioral of entity xil_defaultlib.DISPLAY_CONTROL [display_control_default]
-Compiling architecture dataflow of entity xil_defaultlib.decoder [decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [\SYNCHRNZR(n_monedas=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.EDGE_DETECTOR [\EDGE_DETECTOR(n_monedas=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,size_cuenta...]
+Compiling architecture behavioral of entity xil_defaultlib.FSM [\FSM(n_estados=4,n_displays=9)\]
+Compiling architecture behavioral of entity xil_defaultlib.DISPLAY_CONTROL [\DISPLAY_CONTROL(size_cuenta=5,s...]
+Compiling architecture dataflow of entity xil_defaultlib.decoder [\decoder(size_code=4,n_segmentos...]
 Compiling architecture behavioral of entity xil_defaultlib.PRESCALER [prescaler_default]
 Compiling architecture estructural of entity xil_defaultlib.MAQ_EXP [maq_exp_default]
 Compiling architecture bench of entity xil_defaultlib.testbench

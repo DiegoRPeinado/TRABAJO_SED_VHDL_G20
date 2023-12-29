@@ -2,17 +2,23 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity FSM is
-    Port ( CLK : in STD_LOGIC;
-           PAGAR : in STD_LOGIC;
-           PAGO_OK : in STD_LOGIC;
-           ERROR_COUNTER : in STD_LOGIC;
-           TIPO_REFRESCO : in STD_LOGIC;
-           CONTROL_IN : in STD_LOGIC_VECTOR (8 downto 0);
-           RESET : in STD_LOGIC;
-           ERROR : out STD_LOGIC;
-           REFRESCO_OUT : out STD_LOGIC;
-           ESTADOS_OUT : out STD_LOGIC_VECTOR(3 downto 0);
-           CONTROL_OUT : out STD_LOGIC_VECTOR (8 downto 0));
+    Generic(
+        N_ESTADOS: POSITIVE;
+        N_DISPLAYS: POSITIVE      
+    );
+    Port( 
+        CLK : in STD_LOGIC;
+        PAGAR : in STD_LOGIC;
+        PAGO_OK : in STD_LOGIC;
+        ERROR_COUNTER : in STD_LOGIC;
+        TIPO_REFRESCO : in STD_LOGIC;
+        CONTROL_IN : in STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0);
+        RESET : in STD_LOGIC;
+        ERROR : out STD_LOGIC;
+        REFRESCO_OUT : out STD_LOGIC;
+        ESTADOS_OUT : out STD_LOGIC_VECTOR(N_ESTADOS - 1 downto 0);
+        CONTROL_OUT : out STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0)
+    );
 end FSM;
 
 architecture Behavioral of FSM is

@@ -34,14 +34,21 @@ USE ieee.std_logic_unsigned.ALL;
 --use UNISIM.VComponents.all;
 
 entity DISPLAY_CONTROL is
-    Port ( CUENTA : in STD_LOGIC_VECTOR (4 downto 0);
-           CLK : in STD_LOGIC;
-           CODE : out STD_LOGIC_VECTOR (3 downto 0);
-           CONTROL : out STD_LOGIC_VECTOR (8 downto 0));
+    Generic(
+        SIZE_CUENTA: POSITIVE;
+        SIZE_CODE: POSITIVE;
+        N_DISPLAYS: POSITIVE
+    );
+    Port(
+        CUENTA : in STD_LOGIC_VECTOR (SIZE_CUENTA - 1 downto 0);
+        CLK : in STD_LOGIC;
+        CODE : out STD_LOGIC_VECTOR (SIZE_CODE - 1 downto 0);
+        CONTROL : out STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0)
+    );
 end DISPLAY_CONTROL;
 
 architecture Behavioral of DISPLAY_CONTROL is
-signal INTERNAL_CONTROL : STD_LOGIC_VECTOR (7 downto 0):="11111110";
+signal INTERNAL_CONTROL : STD_LOGIC_VECTOR (N_DISPLAYS - 2 downto 0):="11111110";
 signal DP : STD_LOGIC := '0';
 begin
 process(CLK)
@@ -51,9 +58,10 @@ begin
         CASE INTERNAL_CONTROL IS 
             WHEN "11111110" =>
                 INTERNAL_CONTROL <= "11111101";
-                IF CUENTA < "01010" THEN
-                    CODE <= "1010" - CUENTA(3 downto 0);
-                ELSE CODE <= CUENTA (3 DOWNTO 0);
+                IF CUENTA = "00000" THEN
+                    CODE <= "0000";
+                ELSE 
+                    CODE <= "0101" - CUENTA (3 DOWNTO 0);
                 END IF;
                 DP <= '1';
             WHEN "11111101" =>
@@ -74,7 +82,7 @@ begin
             WHEN "11011111" =>
                 INTERNAL_CONTROL <= "10111111";
                 CODE <= "0001"; 
-                DP <= '1';
+                DP <= '0';
             WHEN OTHERS =>
                 INTERNAL_CONTROL <= "11111110";
                 CODE <= "0000";

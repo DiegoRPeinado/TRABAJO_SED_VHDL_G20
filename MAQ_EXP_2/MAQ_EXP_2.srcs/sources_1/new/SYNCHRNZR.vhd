@@ -32,22 +32,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity SYNCHRNZR is
-    Port ( CLK : in STD_LOGIC;
-           ASYNC_MONEDAS: in STD_LOGIC_VECTOR (3 downto 0); 
-           ASYNC_PAGAR: in STD_LOGIC;
-           ASYNC_TIPO_REFRESCO: in STD_LOGIC;
-           SYNCD_MONEDAS: out STD_LOGIC_VECTOR (3 downto 0);
-           SYNCD_PAGAR: out STD_LOGIC;
-           SYNCD_TIPO_REFRESCO: out STD_LOGIC);
+    Generic(
+        N_MONEDAS: POSITIVE      
+    );
+    Port(
+        CLK : in STD_LOGIC;
+        ASYNC_MONEDAS: in STD_LOGIC_VECTOR (N_MONEDAS - 1 downto 0); 
+        ASYNC_PAGAR: in STD_LOGIC;
+        ASYNC_TIPO_REFRESCO: in STD_LOGIC;
+        SYNCD_MONEDAS: out STD_LOGIC_VECTOR (N_MONEDAS - 1 downto 0);
+        SYNCD_PAGAR: out STD_LOGIC;
+        SYNCD_TIPO_REFRESCO: out STD_LOGIC
+     );
 end SYNCHRNZR;
 
 architecture Behavioral of SYNCHRNZR is
 
-    SIGNAL SREG_1_MONEDAS: STD_LOGIC_VECTOR(3 downto 0);
+    SIGNAL SREG_1_MONEDAS: STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0);
     SIGNAL SREG_1_PAGAR: STD_LOGIC;
     SIGNAL SREG_1_TIPO: STD_LOGIC;
 
-    SIGNAL SREG_2_MONEDAS: STD_LOGIC_VECTOR(3 downto 0);
+    SIGNAL SREG_2_MONEDAS: STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0);
     SIGNAL SREG_2_PAGAR: STD_LOGIC;
     SIGNAL SREG_2_TIPO: STD_LOGIC;
     
