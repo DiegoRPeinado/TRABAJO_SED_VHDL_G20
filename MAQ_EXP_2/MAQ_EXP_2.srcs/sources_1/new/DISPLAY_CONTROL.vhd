@@ -37,58 +37,118 @@ entity DISPLAY_CONTROL is
     Generic(
         SIZE_CUENTA: POSITIVE;
         SIZE_CODE: POSITIVE;
+        N_ESTADOS: POSITIVE;
         N_DISPLAYS: POSITIVE
     );
     Port(
         CUENTA : in STD_LOGIC_VECTOR (SIZE_CUENTA - 1 downto 0);
         CLK : in STD_LOGIC;
         CODE : out STD_LOGIC_VECTOR (SIZE_CODE - 1 downto 0);
-        CONTROL : out STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0)
+        CONTROL : out STD_LOGIC_VECTOR (N_DISPLAYS * N_ESTADOS - 1 downto 0)
     );
 end DISPLAY_CONTROL;
 
 architecture Behavioral of DISPLAY_CONTROL is
-signal INTERNAL_CONTROL : STD_LOGIC_VECTOR (N_DISPLAYS - 2 downto 0):="11111110";
-signal DP : STD_LOGIC := '0';
-begin
-process(CLK)
+
+-- SE DEFINE UN VECTOR DE CONTROL DE SEGMENTOS PARA CADA ESTADO
+subtype CONTROL_ESTADO is STD_LOGIC_VECTOR(N_DISPLAYS - 1 downto 0);
+
+-- SE DEFINE EL ARRAY QUE CONTENDRÁ TODOS LOS CONTROLES DE ESTADO 
+type CONTROL_TOTAL is ARRAY (0 to N_ESTADOS - 1) of CONTROL_ESTADO;
+
+-- CREAMOS LAS SEÑALES 
+signal CONTROL_SIG : CONTROL_TOTAL;
+signal CODE_SIG : STD_LOGIC_VECTOR (SIZE_CODE - 1 downto 0);
 
 begin
+
+process(CLK)
+begin
     IF rising_edge (CLK) THEN 
-        CASE INTERNAL_CONTROL IS 
-            WHEN "11111110" =>
-                INTERNAL_CONTROL <= "11111101";
-                IF CUENTA = "00000" THEN
-                    CODE <= "0000";
-                ELSE 
-                    CODE <= "0101" - CUENTA (3 DOWNTO 0);
-                END IF;
-                DP <= '1';
-            WHEN "11111101" =>
-                INTERNAL_CONTROL <= "11111011";
-              IF CUENTA = "00000" THEN
-                    CODE <= "0001";
-                ELSE CODE <= "0000";
-                END IF;
-                DP <= '0'; 
-            WHEN "11111011" =>
-                INTERNAL_CONTROL <= "11101111";
-                CODE <= "0000"; 
-                DP <= '1';
-            WHEN "11101111" =>
-                INTERNAL_CONTROL <= "11011111";
-                CODE <= "0000"; 
-                DP <= '1';
-            WHEN "11011111" =>
-                INTERNAL_CONTROL <= "10111111";
-                CODE <= "0001"; 
-                DP <= '0';
+    
+        CASE CONTROL_SIG(0) IS
+            WHEN "111011111" =>
+                CONTROL_SIG(0) <= "110111111";
+                CODE_SIG <= "10100"; -- LETRA L
+            WHEN "110111111" =>
+                CONTROL_SIG(0) <= "101111111";
+                CODE_SIG <= "10001"; -- LETRA d
+            WHEN "101111111" =>
+                CONTROL_SIG(0) <= "011111111";
+                CODE_SIG <= "00001"; -- LETRA I/1
             WHEN OTHERS =>
-                INTERNAL_CONTROL <= "11111110";
-                CODE <= "0000";
-                DP <= '1';
+                CONTROL_SIG(0) <= "111011111";
+                CODE_SIG <= "10010"; -- LETRA E           
         END CASE;
+        
+        CASE CONTROL_SIG(1) IS 
+            WHEN "111111101" =>
+                CONTROL_SIG(1) <= "111111011";
+                IF CUENTA = "00000" THEN
+                    CODE_SIG <= "00000";
+                ELSE 
+                    CODE_SIG <= "01010" - CUENTA (3 DOWNTO 0);
+                END IF;
+                --DP <= '1';
+            WHEN "111111011" =>
+                CONTROL_SIG(1) <= "111110110";
+                IF CUENTA = "00000" THEN
+                    CODE_SIG <= "00001";
+                ELSE CODE_SIG <= "00000";
+                END IF;
+                --DP <= '0'; 
+            WHEN "111110110" =>
+                CONTROL_SIG(1) <= "111011111";
+                CODE_SIG <= "00000"; 
+                --DP <= '1';
+            WHEN "111011111" =>
+                CONTROL_SIG(1) <= "110111111";
+                CODE_SIG <= "00000"; 
+                --DP <= '1';
+            WHEN "110111111" =>
+                CONTROL_SIG(1) <= "101111110";
+                CODE_SIG <= "00001"; 
+                --DP <= '0';
+            WHEN OTHERS =>
+                CONTROL_SIG(1) <= "111111101";
+                CODE_SIG <= "00000";
+                --DP <= '1';
+        END CASE;
+        
+        CASE CONTROL_SIG(2) IS
+            WHEN "111011111" =>
+                CONTROL_SIG(2) <= "110111111";
+                CODE_SIG <= "11000"; -- LETRA T
+            WHEN "110111111" =>
+                CONTROL_SIG(2) <= "101111111";
+                CODE_SIG <= "11001"; -- LETRA U
+            WHEN "101111111" =>
+                CONTROL_SIG(2) <= "011111111";
+                CODE_SIG <= "10101"; -- LETRA O
+            WHEN OTHERS =>
+                CONTROL_SIG(2) <= "111011111";
+                CODE_SIG <= "00001"; -- NUMERO DEL REFRESCO (1)        
+        END CASE;
+        
+        CASE CONTROL_SIG(3) IS
+            WHEN "11101111"&'1' =>
+                CONTROL_SIG(3) <= "11011111"&'1';
+                CODE_SIG <= "00001"; -- LETRA I/1
+            WHEN "11011111"&'1' =>
+                CONTROL_SIG(3) <= "10111111"&'1';
+                CODE_SIG <= "10000"; -- LETRA A
+            WHEN "10111111"&'1' =>
+                CONTROL_SIG(3) <= "01111111"&'1';
+                CODE_SIG <= "10011"; -- LETRA F
+            WHEN OTHERS =>
+                CONTROL_SIG(3) <= "11101111"&'1';
+                CODE_SIG <= "10100"; -- LETRA L
+        END CASE;
+        
     END IF; 
-CONTROL <= DP & INTERNAL_CONTROL;                 
+    
+CONTROL <= CONTROL_SIG(3)&CONTROL_SIG(2)&CONTROL_SIG(1)&CONTROL_SIG(0);  
+CODE <= CODE_SIG;   
+            
 end process;
 end Behavioral;

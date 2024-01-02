@@ -27,9 +27,9 @@ entity MAQ_EXP is
         N_MONEDAS: POSITIVE := 4;
         N_ESTADOS: POSITIVE := 4;
         N_SEGMENTOS: POSITIVE := 7;
-        N_DISPLAYS: POSITIVE := 9; -- 8 más el punto decimal
+        N_DISPLAYS: POSITIVE := 9; -- 8 Y EL PUNTO DECIMAL
         SIZE_CUENTA: POSITIVE := 5;
-        SIZE_CODE: POSITIVE := 4      
+        SIZE_CODE: POSITIVE := 5 -- INCLUYE NUMEROS 0-9 Y ALGUNAS LETRAS      
     );
     
     Port(
@@ -105,7 +105,7 @@ component FSM is
         PAGO_OK : in STD_LOGIC;
         ERROR_COUNTER : in STD_LOGIC;
         TIPO_REFRESCO : in STD_LOGIC;
-        CONTROL_IN : in STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0);
+        CONTROL_IN : in STD_LOGIC_VECTOR (N_DISPLAYS * N_ESTADOS - 1 downto 0);
         RESET : in STD_LOGIC;
         ERROR : out STD_LOGIC;
         REFRESCO_OUT : out STD_LOGIC;
@@ -117,6 +117,7 @@ end component;
 component DISPLAY_CONTROL is
     Generic(
         SIZE_CUENTA: POSITIVE;
+        N_ESTADOS: POSITIVE;
         SIZE_CODE: POSITIVE;
         N_DISPLAYS: POSITIVE
     );
@@ -124,7 +125,7 @@ component DISPLAY_CONTROL is
         CUENTA : in STD_LOGIC_VECTOR (SIZE_CUENTA - 1 downto 0);
         CLK : in STD_LOGIC;
         CODE : out STD_LOGIC_VECTOR (SIZE_CODE - 1 downto 0);
-        CONTROL : out STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0)
+        CONTROL : out STD_LOGIC_VECTOR (N_DISPLAYS * N_ESTADOS - 1 downto 0)
     );
 end component;
 
@@ -153,7 +154,7 @@ signal AUX5: std_logic; --Conecta PAGAR del SYNC con el COUNTER y la FSM
 signal AUX6: std_logic; --Conecta TIPO_TEFRSCO del SYNC con el COUNTER y la FSM
 signal AUX7: std_logic_vector (SIZE_CUENTA - 1 downto 0); --Conecta CUENTA del counter con CUENTA del DISPLAY_CONTROL
 signal AUX8: std_logic_vector (SIZE_CODE - 1 downto 0); --Conecta CODE del DISPLAY_CONTROL con CODE del DECODIFICADOR
-signal AUX9: std_logic_vector (N_DISPLAYS - 1 downto 0); --Conecta CONTROL del DISPLAY_CONTROL con CONTROL de la FSM
+signal AUX9: std_logic_vector (N_DISPLAYS * N_ESTADOS - 1 downto 0); --Conecta CONTROL del DISPLAY_CONTROL con CONTROL de la FSM
 signal AUX_CLK: std_logic; --Conecta CLK_OUT del prescaler con la entrada CLK de DISPLAY_CONTROL
 --signal SEGMENTOS: std_logic_vector(6 downto 0); --Salida del DECODER que le llega al display)
 --signal DIGCTRL:  std_logic_vector(8 downto 0); --Salida de la FSM que controla que display se ha encendido y el punto decimal
@@ -221,6 +222,7 @@ PORT MAP(
 CONTROL: DISPLAY_CONTROL 
 GENERIC MAP(
     SIZE_CUENTA => SIZE_CUENTA,
+    N_ESTADOS => N_ESTADOS,
     SIZE_CODE => SIZE_CODE,
     N_DISPLAYS => N_DISPLAYS
 )

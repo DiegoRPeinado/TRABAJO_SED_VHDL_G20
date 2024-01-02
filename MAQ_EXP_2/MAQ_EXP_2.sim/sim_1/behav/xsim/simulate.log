@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: Success: simulation finished.
+Time: 70 ns  Iteration: 0  Process: /EDGE_DETECTOR_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TB_EDGE.vhd
+$finish called at time : 70 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TB_EDGE.vhd" Line 81

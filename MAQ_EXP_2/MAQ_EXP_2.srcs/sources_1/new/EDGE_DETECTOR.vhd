@@ -27,7 +27,7 @@ entity EDGE_DETECTOR is
     );
     Port(
         CLK : in STD_LOGIC;
-        MONEDAS_IN : in STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0); -- 6 bits de se?ales de entrada.
+        MONEDAS_IN : in STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0); --  Entrada monedas 
         EDGE_MONEDAS : out STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0) -- Salida de detecci?n de flanco.
     );
 end EDGE_DETECTOR;

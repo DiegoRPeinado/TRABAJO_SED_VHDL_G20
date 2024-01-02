@@ -63,7 +63,7 @@ process(CLK, RESET)
             elsif MONEDAS = "0100" then
                 CUENTA_SIG <= CUENTA_SIG + "00101";  -- +50cents
             elsif MONEDAS = "1000" then
-                CUENTA_SIG <= CUENTA_SIG + "01010";  -- +1?
+                CUENTA_SIG <= CUENTA_SIG + "01010";  -- +1€
             end if;
         end if;
         

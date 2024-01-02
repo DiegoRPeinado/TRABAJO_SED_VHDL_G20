@@ -78,7 +78,7 @@ begin
                           N_SEGMENTOS           => 7,                          
                           N_DISPLAYS           => 9, 
                           SIZE_CUENTA           => 5, 
-                          SIZE_CODE           => 4
+                          SIZE_CODE           => 5
                           )  
                                                   
                           port map ( CLK           => CLK,
