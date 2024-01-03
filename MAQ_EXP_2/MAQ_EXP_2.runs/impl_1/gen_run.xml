@@ -166,5 +166,6 @@
     <Step Id="write_bitstream">
       <Option Id="BinFile">1</Option>
     </Step>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

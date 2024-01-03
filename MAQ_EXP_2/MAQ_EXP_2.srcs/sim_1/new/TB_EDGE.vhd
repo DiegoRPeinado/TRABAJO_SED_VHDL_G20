@@ -38,7 +38,8 @@ architecture bench of EDGE_DETECTOR_tb is
           EDGE_MONEDAS : out STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0)
       );
   end component;
-
+  
+  signal N_MONEDAS : POSITIVE := 4;
   signal CLK: STD_LOGIC;
   signal MONEDAS_IN: STD_LOGIC_VECTOR(3 downto 0);
   signal EDGE_MONEDAS: STD_LOGIC_VECTOR(3 downto 0) ;
@@ -47,8 +48,7 @@ architecture bench of EDGE_DETECTOR_tb is
 
 begin
 
-  -- Insert values for generic parameters !!
-  uut: EDGE_DETECTOR generic map ( N_MONEDAS    => 4 )
+  uut: EDGE_DETECTOR generic map ( N_MONEDAS    => N_MONEDAS )
                         port map ( CLK          => CLK,
                                    MONEDAS_IN   => MONEDAS_IN,
                                    EDGE_MONEDAS => EDGE_MONEDAS );

@@ -3,6 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity FSM is
     Generic(
+        N_REFRESCOS: POSITIVE;
         N_ESTADOS: POSITIVE;
         N_DISPLAYS: POSITIVE      
     );
@@ -10,8 +11,8 @@ entity FSM is
         CLK : in STD_LOGIC;
         PAGAR : in STD_LOGIC;
         PAGO_OK : in STD_LOGIC;
+        TIPO_REFRESCO: in STD_LOGIC_VECTOR (N_REFRESCOS - 1 downto 0);
         ERROR_COUNTER : in STD_LOGIC;
-        TIPO_REFRESCO : in STD_LOGIC;
         CONTROL_IN : in STD_LOGIC_VECTOR (N_DISPLAYS * N_ESTADOS - 1 downto 0);
         RESET : in STD_LOGIC;
         ERROR : out STD_LOGIC;
@@ -43,7 +44,7 @@ begin
         NEXT_STATE <= CURRENT_STATE;
         case CURRENT_STATE is 
             when S0 =>
-                if PAGAR = '1' then
+                if PAGAR = '1' AND TIPO_REFRESCO /= "00" then
                     NEXT_STATE <= S1;
                 end if;                
             when S1 =>

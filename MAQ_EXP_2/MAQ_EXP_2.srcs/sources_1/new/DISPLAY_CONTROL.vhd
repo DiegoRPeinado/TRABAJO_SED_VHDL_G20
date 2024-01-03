@@ -36,12 +36,15 @@ USE ieee.std_logic_unsigned.ALL;
 entity DISPLAY_CONTROL is
     Generic(
         SIZE_CUENTA: POSITIVE;
+        N_REFRESCOS: POSITIVE;
         SIZE_CODE: POSITIVE;
         N_ESTADOS: POSITIVE;
         N_DISPLAYS: POSITIVE
     );
     Port(
         CUENTA : in STD_LOGIC_VECTOR (SIZE_CUENTA - 1 downto 0);
+        TIPO_REFRESCO: in STD_LOGIC_VECTOR (N_REFRESCOS - 1 downto 0);
+        PRECIOS: in std_logic_vector(N_REFRESCOS * SIZE_CUENTA - 1 downto 0);
         CLK : in STD_LOGIC;
         CODE : out STD_LOGIC_VECTOR (SIZE_CODE - 1 downto 0);
         CONTROL : out STD_LOGIC_VECTOR (N_DISPLAYS * N_ESTADOS - 1 downto 0)
@@ -66,47 +69,82 @@ process(CLK)
 begin
     IF rising_edge (CLK) THEN 
     
-        CASE CONTROL_SIG(0) IS
+        CASE CONTROL_SIG(0) IS -- PROD 1 / PROD 2
+            WHEN "111101111" =>
+                CONTROL_SIG(0) <= "111011111";
+                CODE_SIG <= "10001"; -- LETRA D
             WHEN "111011111" =>
                 CONTROL_SIG(0) <= "110111111";
-                CODE_SIG <= "10100"; -- LETRA L
+                CODE_SIG <= "10101"; -- LETRA O
             WHEN "110111111" =>
                 CONTROL_SIG(0) <= "101111111";
-                CODE_SIG <= "10001"; -- LETRA d
+                CODE_SIG <= "10111"; -- LETRA R
             WHEN "101111111" =>
                 CONTROL_SIG(0) <= "011111111";
-                CODE_SIG <= "00001"; -- LETRA I/1
+                CODE_SIG <= "10110"; -- LETRA P
             WHEN OTHERS =>
-                CONTROL_SIG(0) <= "111011111";
-                CODE_SIG <= "10010"; -- LETRA E           
+                CONTROL_SIG(0) <= "111101111";
+                IF TIPO_REFRESCO = "01" THEN
+                    CODE_SIG <= "00001"; -- NUMERO DEL PRODUCTO
+                ELSIF TIPO_REFRESCO = "10" THEN
+                    CODE_SIG <= "00010"; -- NUMERO DEL PRODUCTO
+                ELSE CODE_SIG <= "00000";
+                END IF;          
         END CASE;
         
-        CASE CONTROL_SIG(1) IS 
+        CASE CONTROL_SIG(1) IS -- MUESTRA EL PRECIO DEL REFRESCO Y LO QUE FALTA PARA PAGAR
             WHEN "111111101" =>
                 CONTROL_SIG(1) <= "111111011";
-                IF CUENTA = "00000" THEN
-                    CODE_SIG <= "00000";
-                ELSE 
-                    CODE_SIG <= "01010" - CUENTA (3 DOWNTO 0);
-                END IF;
+                -- MOSTRAMOS EL PRIMER DECIMAL DEL PRECIO QUE FALTA PARA PAGAR
+                -- SI FALTA POR PAGAR 90C, SACARÁ POR PANTALLA UN 9
+                IF TIPO_REFRESCO = "01" THEN
+                    IF PRECIOS(SIZE_CUENTA - 1 downto 0) - CUENTA >= "01010" THEN
+                        CODE_SIG <= PRECIOS(SIZE_CUENTA - 1 downto 0) - "01010" - CUENTA;
+                    ELSE 
+                        CODE_SIG <= PRECIOS(SIZE_CUENTA - 1 downto 0) - CUENTA;
+                    END IF;
+                 ELSIF TIPO_REFRESCO = "10" THEN
+                    IF PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA - 1) - CUENTA >= "01010" THEN
+                        CODE_SIG <= PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA - 1) - "01010" - CUENTA;
+                    ELSE 
+                        CODE_SIG <= PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA - 1) - CUENTA;
+                    END IF;
+                END IF;                      
                 --DP <= '1';
             WHEN "111111011" =>
                 CONTROL_SIG(1) <= "111110110";
-                IF CUENTA = "00000" THEN
-                    CODE_SIG <= "00001";
-                ELSE CODE_SIG <= "00000";
+                -- MOSTRAMOS LA UNIDAD DEL PRECIO (EN EUROS) QUE FALTA POR PAGAR 
+                -- SI TENEMOS QUE PAGAR MENOS DE UN EURO, SERÁ 0
+                IF TIPO_REFRESCO = "01" THEN
+                    IF PRECIOS(SIZE_CUENTA - 1 downto 0) - CUENTA >= "01010" THEN
+                        CODE_SIG <= "00001";
+                    ELSE CODE_SIG <= "00000";
+                    END IF;
+                ELSIF TIPO_REFRESCO = "10" THEN
+                    IF PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA - 1) - CUENTA >= "01010" THEN
+                        CODE_SIG <= "00001";
+                    ELSE CODE_SIG <= "00000";
+                    END IF;
                 END IF;
                 --DP <= '0'; 
             WHEN "111110110" =>
                 CONTROL_SIG(1) <= "111011111";
+                 -- Sacamos por pantalla el segundo decimal del precio del refresco: 0 siempre
                 CODE_SIG <= "00000"; 
                 --DP <= '1';
             WHEN "111011111" =>
                 CONTROL_SIG(1) <= "110111111";
-                CODE_SIG <= "00000"; 
+                IF TIPO_REFRESCO = "01" THEN
+                    -- Sacamos por pantalla el primer decimal del precio de 1.00€ (10 - 10)
+                    CODE_SIG <= PRECIOS(SIZE_CUENTA - 1 downto 0) - "01010"; 
+                ELSIF TIPO_REFRESCO = "10" THEN
+                    -- Sacamos por pantalla el primer decimal del precio de 1.30€ (13 - 10)
+                    CODE_SIG <= PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA - 1)- "01010";
+                END IF;
                 --DP <= '1';
             WHEN "110111111" =>
                 CONTROL_SIG(1) <= "101111110";
+                -- Sacamos por pantalla la unidad del precio del refresco: 1€ siempre
                 CODE_SIG <= "00001"; 
                 --DP <= '0';
             WHEN OTHERS =>
@@ -115,7 +153,7 @@ begin
                 --DP <= '1';
         END CASE;
         
-        CASE CONTROL_SIG(2) IS
+        CASE CONTROL_SIG(2) IS -- EL REFRESCO HA SALIDO: OUT 1 / OUT 2
             WHEN "111011111" =>
                 CONTROL_SIG(2) <= "110111111";
                 CODE_SIG <= "11000"; -- LETRA T
@@ -127,10 +165,14 @@ begin
                 CODE_SIG <= "10101"; -- LETRA O
             WHEN OTHERS =>
                 CONTROL_SIG(2) <= "111011111";
-                CODE_SIG <= "00001"; -- NUMERO DEL REFRESCO (1)        
+                IF TIPO_REFRESCO = "01" THEN
+                    CODE_SIG <= "00001"; -- NUMERO DEL REFRESCO (1)      
+                ELSIF TIPO_REFRESCO = "10" THEN
+                    CODE_SIG <= "00010"; -- NUMERO DEL REFRESCO (1) 
+                END IF; 
         END CASE;
         
-        CASE CONTROL_SIG(3) IS
+        CASE CONTROL_SIG(3) IS -- SE HA SOBREPASADO EL PRECIO DEL REFRESCO
             WHEN "11101111"&'1' =>
                 CONTROL_SIG(3) <= "11011111"&'1';
                 CODE_SIG <= "00001"; -- LETRA I/1

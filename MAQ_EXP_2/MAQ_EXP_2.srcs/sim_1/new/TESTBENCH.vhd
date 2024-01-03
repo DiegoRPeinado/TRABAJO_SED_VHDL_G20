@@ -30,6 +30,7 @@ architecture bench of TESTBENCH is
   component MAQ_EXP
     Generic(
         N_MONEDAS: POSITIVE;
+        N_REFRESCOS: POSITIVE;
         N_ESTADOS: POSITIVE;
         N_SEGMENTOS: POSITIVE;
         N_DISPLAYS: POSITIVE; -- 8 más el punto decimal
@@ -42,7 +43,7 @@ architecture bench of TESTBENCH is
         RESET : in STD_LOGIC;
         PAGAR : in STD_LOGIC;
         MONEDAS : in STD_LOGIC_VECTOR (N_MONEDAS - 1 downto 0);
-        TIPO_REFRESCO : in STD_LOGIC;
+        TIPO_REFRESCO : in STD_LOGIC_VECTOR (N_REFRESCOS - 1 downto 0);
         ERROR : out STD_LOGIC;
         REFRESCO_OUT : out STD_LOGIC;
         ESTADOS: out STD_LOGIC_VECTOR (N_ESTADOS - 1 downto 0);
@@ -57,7 +58,7 @@ architecture bench of TESTBENCH is
   signal RESET: STD_LOGIC;
   signal PAGAR: STD_LOGIC;
   signal MONEDAS: STD_LOGIC_VECTOR (3 downto 0);
-  signal TIPO_REFRESCO: STD_LOGIC;
+  signal TIPO_REFRESCO: STD_LOGIC_VECTOR (2 - 1 downto 0);
   signal ERROR: STD_LOGIC;
   signal REFRESCO_OUT: STD_LOGIC;
   signal ESTADOS: std_logic_vector (3 downto 0);
@@ -75,9 +76,10 @@ begin
                           GENERIC map ( 
                           N_MONEDAS           => 4,
                           N_ESTADOS           => 4,
-                          N_SEGMENTOS           => 7,                          
-                          N_DISPLAYS           => 9, 
-                          SIZE_CUENTA           => 5, 
+                          N_REFRESCOS         => 2,
+                          N_SEGMENTOS         => 7,                          
+                          N_DISPLAYS          => 9, 
+                          SIZE_CUENTA         => 5, 
                           SIZE_CODE           => 5
                           )  
                                                   
@@ -116,7 +118,7 @@ begin
     wait for 5 ns;
     
 	PAGAR <= '1';
-    TIPO_REFRESCO <= '1';
+    TIPO_REFRESCO <= "01";
     wait for clock_period;
     
     MONEDAS <= "0010";
