@@ -43,8 +43,8 @@ architecture bench of SYNCHRNZR_tb is
           SYNCD_TIPO_REFRESCO: out STD_LOGIC_VECTOR (N_REFRESCOS - 1 downto 0)
        );
   end component;
-  signal N_MONEDAS : POSITIVE := 4;
-  signal N_REFRESCOS : POSITIVE := 2;
+  constant N_MONEDAS : POSITIVE := 4;
+  constant N_REFRESCOS : POSITIVE := 2;
   signal CLK: STD_LOGIC;
   signal ASYNC_MONEDAS: STD_LOGIC_VECTOR (N_MONEDAS - 1 downto 0);
   signal ASYNC_PAGAR: STD_LOGIC;
@@ -77,7 +77,7 @@ CLK_TREATMENT: process
   CLK <= '1';
   wait for 0.5 * clock_period;
 
-  end process;
+end process;
 
 stimulus: process
   begin

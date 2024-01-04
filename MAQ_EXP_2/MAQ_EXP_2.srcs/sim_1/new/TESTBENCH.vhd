@@ -35,7 +35,8 @@ architecture bench of TESTBENCH is
         N_SEGMENTOS: POSITIVE;
         N_DISPLAYS: POSITIVE; -- 8 más el punto decimal
         SIZE_CUENTA: POSITIVE;
-        SIZE_CODE: POSITIVE     
+        SIZE_CODE: POSITIVE;
+        PRESCALER_DIV: POSITIVE   
     );
     
     Port(
@@ -80,7 +81,8 @@ begin
                           N_SEGMENTOS         => 7,                          
                           N_DISPLAYS          => 9, 
                           SIZE_CUENTA         => 5, 
-                          SIZE_CODE           => 5
+                          SIZE_CODE           => 5,
+                          PRESCALER_DIV       => 1
                           )  
                                                   
                           port map ( CLK           => CLK,
@@ -134,8 +136,6 @@ begin
     PAGAR <= '0';
     
     wait for clock_period * 8;
-
-    -- Put test bench stimulus code here
     
     assert false
     report "Success: simulation finished."

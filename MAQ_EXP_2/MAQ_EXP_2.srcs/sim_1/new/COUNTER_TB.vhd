@@ -47,9 +47,9 @@ architecture bench of COUNTER_TB is
      );
   end component;
   
-  signal N_MONEDAS: POSITIVE := 4;
-  signal N_REFRESCOS: POSITIVE := 2;
-  signal SIZE_CUENTA: POSITIVE := 5; 
+  constant N_MONEDAS: POSITIVE := 4;
+  constant N_REFRESCOS: POSITIVE := 2;
+  constant SIZE_CUENTA: POSITIVE := 5; 
   signal CLK: std_logic;
   signal CE: std_logic;
   signal RESET: std_logic;

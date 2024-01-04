@@ -12,6 +12,10 @@ vhdl xil_defaultlib  \
 "../../../../MAQ_EXP_2.srcs/sim_1/new/SYNCHRNZR_TB.vhd" \
 "../../../../MAQ_EXP_2.srcs/sim_1/new/TB_EDGE.vhd" \
 "../../../../MAQ_EXP_2.srcs/sim_1/new/TESTBENCH.vhd" \
+"../../../../MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" \
+"../../../../MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd" \
+"../../../../MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd" \
+"../../../../MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd" \
 
 # Do not sort compile order
 nosort

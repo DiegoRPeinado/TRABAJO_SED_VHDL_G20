@@ -33,12 +33,17 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity PRESCALER is
-    Port ( CLK : in STD_LOGIC;
-           CLK_OUT : out STD_LOGIC);
+generic(
+    PRESCALER_DIV: POSITIVE      
+);
+Port(
+    CLK : in STD_LOGIC;
+    CLK_OUT : out STD_LOGIC
+);
 end PRESCALER;
 
 architecture Behavioral of PRESCALER is
-signal CLK_BUFFER: STD_LOGIC_VECTOR (18 downto 0):=(others => '0');
+signal CLK_BUFFER: STD_LOGIC_VECTOR (PRESCALER_DIV - 1 downto 0):=(others => '0');
 begin
 
 process (CLK)

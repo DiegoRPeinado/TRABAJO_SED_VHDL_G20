@@ -39,10 +39,10 @@ architecture bench of EDGE_DETECTOR_tb is
       );
   end component;
   
-  signal N_MONEDAS : POSITIVE := 4;
+  constant N_MONEDAS : POSITIVE := 4;
   signal CLK: STD_LOGIC;
-  signal MONEDAS_IN: STD_LOGIC_VECTOR(3 downto 0);
-  signal EDGE_MONEDAS: STD_LOGIC_VECTOR(3 downto 0) ;
+  signal MONEDAS_IN: STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0);
+  signal EDGE_MONEDAS: STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0) ;
 
   constant clock_period: time := 10 ns;
 

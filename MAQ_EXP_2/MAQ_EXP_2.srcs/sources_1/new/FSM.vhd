@@ -5,7 +5,8 @@ entity FSM is
     Generic(
         N_REFRESCOS: POSITIVE;
         N_ESTADOS: POSITIVE;
-        N_DISPLAYS: POSITIVE      
+        N_DISPLAYS: POSITIVE;
+        SIZE_CODE: POSITIVE           
     );
     Port( 
         CLK : in STD_LOGIC;
@@ -14,11 +15,13 @@ entity FSM is
         TIPO_REFRESCO: in STD_LOGIC_VECTOR (N_REFRESCOS - 1 downto 0);
         ERROR_COUNTER : in STD_LOGIC;
         CONTROL_IN : in STD_LOGIC_VECTOR (N_DISPLAYS * N_ESTADOS - 1 downto 0);
+        CODE_IN:in STD_LOGIC_VECTOR (SIZE_CODE * N_ESTADOS - 1 downto 0);
         RESET : in STD_LOGIC;
         ERROR : out STD_LOGIC;
         REFRESCO_OUT : out STD_LOGIC;
         ESTADOS_OUT : out STD_LOGIC_VECTOR(N_ESTADOS - 1 downto 0);
-        CONTROL_OUT : out STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0)
+        CONTROL_OUT : out STD_LOGIC_VECTOR (N_DISPLAYS - 1 downto 0);
+        CODE_OUT: out STD_LOGIC_VECTOR (SIZE_CODE - 1 downto 0)
     );
 end FSM;
 
@@ -71,22 +74,26 @@ begin
                 ERROR <= '0';
                 REFRESCO_OUT <= '0';
                 ESTADOS_OUT <= "0001";
-                CONTROL_OUT <= CONTROL_IN(8 DOWNTO 0);
+                CONTROL_OUT <= CONTROL_IN(N_DISPLAYS - 1 DOWNTO 0);
+                CODE_OUT <= CODE_IN(SIZE_CODE - 1 DOWNTO 0);
             when S1 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '0';
                 ESTADOS_OUT  <= "0010";
-                CONTROL_OUT <= CONTROL_IN(17 DOWNTO 9);
+                CONTROL_OUT <= CONTROL_IN((N_DISPLAYS * 2) - 1 DOWNTO N_DISPLAYS);
+                CODE_OUT <= CODE_IN((SIZE_CODE * 2) - 1 DOWNTO SIZE_CODE);
             when S2 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '1';
                 ESTADOS_OUT <= "0100";
-                CONTROL_OUT <= CONTROL_IN(26 DOWNTO 18);
+                CONTROL_OUT <= CONTROL_IN((N_DISPLAYS * 3) - 1 DOWNTO N_DISPLAYS * 2);
+                CODE_OUT <= CODE_IN((SIZE_CODE * 3) - 1 DOWNTO SIZE_CODE * 2);
             when S3 =>
                 ERROR <= '1';
                 REFRESCO_OUT <= '0';
                 ESTADOS_OUT <= "1000";
-                CONTROL_OUT <= CONTROL_IN(35 DOWNTO 27);
+                CONTROL_OUT <= CONTROL_IN((N_DISPLAYS * 4) - 1 DOWNTO N_DISPLAYS * 3);
+                CODE_OUT <= CODE_IN((SIZE_CODE * 4) - 1 DOWNTO SIZE_CODE * 3);
         end case;
     end process;
 
