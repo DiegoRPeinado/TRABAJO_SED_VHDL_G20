@@ -87,15 +87,16 @@ component COUNTER is
         SIZE_CUENTA: POSITIVE      
     );
     Port(
-        CLK: in STD_LOGIC;
-        CE: in STD_LOGIC;
-        RESET: in STD_LOGIC;
-        MONEDAS: in STD_LOGIC_VECTOR(N_MONEDAS - 1 downto 0);
-        TIPO_REFRESCO: in STD_LOGIC_VECTOR(N_REFRESCOS - 1 downto 0);
-        ERROR: out STD_LOGIC;
-        PAGO_OK: out STD_LOGIC;
-        CUENTA: out STD_LOGIC_VECTOR(SIZE_CUENTA - 1 downto 0);
-        PRECIOS: out STD_LOGIC_VECTOR(N_REFRESCOS * SIZE_CUENTA - 1 downto 0)
+        CLK: in std_logic;
+        CE: in std_logic;
+        RESET: in std_logic;
+        MONEDAS: in std_logic_vector(N_MONEDAS - 1 downto 0);
+        TIPO_REFRESCO: in std_logic_vector(N_REFRESCOS - 1 downto 0);
+        ERROR: out std_logic;
+        PAGO_OK: out std_logic;
+        CUENTA: out std_logic_vector(SIZE_CUENTA - 1 downto 0);
+        PRECIOS: out std_logic_vector(N_REFRESCOS * SIZE_CUENTA - 1 downto 0);
+        REFRESCO_ACTUAL: out std_logic_vector(N_REFRESCOS - 1 downto 0)
    );
 end component;
 
@@ -167,12 +168,13 @@ signal AUX2: std_logic_vector (N_MONEDAS - 1 downto 0); --Conecta MONEDAS[] de E
 signal AUX3: std_logic; --Conecta PAGO_OK del COUNTER con la FSM
 signal AUX4: std_logic; --Conec0ta ERROR del COUNTER con la FSM
 signal AUX5: std_logic; --Conecta PAGAR del SYNC con el COUNTER y la FSM
-signal AUX6: std_logic_vector (N_REFRESCOS - 1 downto 0); --Conecta TIPO_TEFRSCO del SYNC con el COUNTER, DISPLAY_CONTROL y FSM
+signal AUX6: std_logic_vector (N_REFRESCOS - 1 downto 0); --Conecta TIPO_TEFRSCO del SYNC con el COUNTER
 signal AUX7: std_logic_vector (SIZE_CUENTA - 1 downto 0); --Conecta CUENTA del counter con CUENTA del DISPLAY_CONTROL
 signal AUX8: std_logic_vector (SIZE_CODE * N_ESTADOS - 1 downto 0); --Conecta CODE del DISPLAY_CTRL con CODE de la FSM
 signal AUX9: std_logic_vector (N_DISPLAYS * N_ESTADOS - 1 downto 0); --Conecta CONTROL del DISPLAY_CONTROL con CONTROL de la FSM
 signal AUX10: std_logic_vector(N_REFRESCOS * SIZE_CUENTA - 1 downto 0); --Conecta PRECIOS del contador con el DISPLAY_CONTROL
 signal AUX11: std_logic_vector(SIZE_CODE - 1 downto 0); --Conecta CODE_OUT de la FSM con code del DECODER 
+signal AUX12: std_logic_vector (N_REFRESCOS - 1 downto 0); --Conecta REFRESCO_ACTUAL del counter con DISPLAY_CTRL Y LA FSM
 
 signal AUX_CLK: std_logic; --Conecta CLK_OUT del prescaler con la entrada CLK de DISPLAY_CONTROL
 --signal SEGMENTOS: std_logic_vector(6 downto 0); --Salida del DECODER que le llega al display)
@@ -219,7 +221,8 @@ PORT MAP(
     PAGO_OK => AUX3,
     PRECIOS => AUX10,
     ERROR => AUX4,
-    CUENTA => AUX7
+    CUENTA => AUX7,
+    REFRESCO_ACTUAL => AUX12
     );
 
 CONTROL: DISPLAY_CONTROL 
@@ -232,7 +235,7 @@ GENERIC MAP(
 )
 PORT MAP(
     CUENTA => AUX7,
-    TIPO_REFRESCO => AUX6,
+    TIPO_REFRESCO => AUX12,
     PRECIOS => AUX10,
     CLK => AUX_CLK,
     CODE => AUX8,
@@ -250,7 +253,7 @@ PORT MAP(
     CLK => CLK,
     PAGAR => AUX5, 
     PAGO_OK => AUX3,
-    TIPO_REFRESCO => AUX6,
+    TIPO_REFRESCO => AUX12,
     ERROR_COUNTER => AUX4,
     CODE_IN => AUX8,
     CONTROL_IN => AUX9,

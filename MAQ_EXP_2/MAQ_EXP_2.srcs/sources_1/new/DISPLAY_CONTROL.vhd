@@ -81,7 +81,7 @@ begin
                     CODE_SIG(0) <= "00001"; -- NUMERO DEL PRODUCTO
                 ELSIF TIPO_REFRESCO = "10" THEN
                     CODE_SIG(0) <= "00010"; -- NUMERO DEL PRODUCTO
-                ELSE CODE_SIG(0) <= "00000";
+                ELSE CODE_SIG(0) <= "11111"; -- NINGUN PRODUCTO SELECCIONADO
                 END IF;          
         END CASE;
         

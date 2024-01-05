@@ -3,10 +3,10 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jan  5 18:52:43 2024
-# Process ID: 6764
+# Start of session at: Thu Jan  4 13:35:51 2024
+# Process ID: 16724
 # Current directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18972 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MAQ_EXP_2\MAQ_EXP_2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1452 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MAQ_EXP_2\MAQ_EXP_2.xpr
 # Log file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/vivado.log
 # Journal file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2\vivado.jou
 # Running On: LAPTOP-9VF0APCD, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 8320 MB
@@ -118,113 +118,62 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:38 ; elapsed = 00:00:18 . Memory (MB): peak = 1544.617 ; gain = 343.504
-set_property top COUNTER_tb [get_filesets sim_1]
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 1543.625 ; gain = 319.184
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd w ]
+add_files -fileset sim_1 C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd
+close [ open C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd w ]
+add_files -fileset sim_1 C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd
+close [ open C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd w ]
+add_files -fileset sim_1 C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+close [ open C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd w ]
+add_files -fileset sim_1 C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd
+set_property top PRESCALER_tb [get_filesets sim_1]
 set_property top_lib xil_defaultlib [get_filesets sim_1]
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
+INFO: [Vivado 12-12493] Simulation top is 'PRESCALER_tb'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'COUNTER_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'PRESCALER_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
+"xvhdl --incr --relax -prj PRESCALER_tb_vhdl.prj"
 ECHO est  desactivado.
 ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/PRESCALER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRESCALER'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MAQ_EXP'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/SYNCHRNZR_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TB_EDGE.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'EDGE_DETECTOR_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TESTBENCH.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TESTBENCH'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM_TB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRESCALER_tb'
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PRESCALER_tb_behav xil_defaultlib.PRESCALER_tb -log elaborate.log"
 ECHO est  desactivado.
 ECHO est  desactivado.
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-9020] illegal aggregate choice 'others' for an unconstrained target [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:72]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit counter_tb in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'COUNTER_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-9020] illegal aggregate choice 'others' for an unconstrained target [C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd:75]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit counter_tb in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'COUNTER_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PRESCALER_tb_behav xil_defaultlib.PRESCALER_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -237,17 +186,170 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.PRESCALER [\PRESCALER(prescaler_div=2)\]
+Compiling architecture bench of entity xil_defaultlib.prescaler_tb
+Built simulation snapshot PRESCALER_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PRESCALER_tb_behav -key {Behavioral:sim_1:Functional:PRESCALER_tb} -tclbatch {PRESCALER_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source PRESCALER_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: Success: simulation finished.
+Time: 100 ns  Iteration: 0  Process: /PRESCALER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd
+$finish called at time : 100 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd" Line 49
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PRESCALER_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1597.160 ; gain = 44.039
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'PRESCALER_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'PRESCALER_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj PRESCALER_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/PRESCALER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRESCALER'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'PRESCALER_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PRESCALER_tb_behav xil_defaultlib.PRESCALER_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PRESCALER_tb_behav xil_defaultlib.PRESCALER_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.PRESCALER [\PRESCALER(prescaler_div=2)\]
+Compiling architecture bench of entity xil_defaultlib.prescaler_tb
+Built simulation snapshot PRESCALER_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+Failure: Success: simulation finished.
+Time: 100 ns  Iteration: 0  Process: /PRESCALER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd
+$finish called at time : 100 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd" Line 49
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top decoder_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj decoder_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'COUNTER'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DECODER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'decoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/EDGE_DETECTOR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'EDGE_DETECTOR'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/PRESCALER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRESCALER'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MAQ_EXP'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/SYNCHRNZR_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TB_EDGE.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'EDGE_DETECTOR_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TESTBENCH.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TESTBENCH'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM_TB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'decoder_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRESCALER_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot decoder_tb_behav xil_defaultlib.decoder_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot decoder_tb_behav xil_defaultlib.decoder_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture dataflow of entity xil_defaultlib.decoder [\decoder(size_code=5,n_segmentos...]
+Compiling architecture bench of entity xil_defaultlib.decoder_tb
+Built simulation snapshot decoder_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "COUNTER_tb_behav -key {Behavioral:sim_1:Functional:COUNTER_tb} -tclbatch {COUNTER_tb.tcl} -log {simulate.log}"
+   with args "decoder_tb_behav -key {Behavioral:sim_1:Functional:decoder_tb} -tclbatch {decoder_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
-source COUNTER_tb.tcl
+source decoder_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -258,42 +360,52 @@ source COUNTER_tb.tcl
 #   }
 # }
 # run 1000ns
+Error: SEGMENTOS SHOULD BE 0000001.
+Time: 0 ps  Iteration: 0  Process: /decoder_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 0100100.
+Time: 10 ns  Iteration: 0  Process: /decoder_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 0001000.
+Time: 20 ns  Iteration: 0  Process: /decoder_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 0111000.
+Time: 30 ns  Iteration: 0  Process: /decoder_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 1100011.
+Time: 40 ns  Iteration: 0  Process: /decoder_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
 Failure: Success: simulation finished.
-Time: 140 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 140 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 127
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'COUNTER_tb_behav' loaded.
+Time: 50 ns  Iteration: 0  Process: /decoder_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+$finish called at time : 50 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd" Line 61
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'decoder_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1595.145 ; gain = 36.492
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1601.953 ; gain = 4.793
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
+INFO: [Vivado 12-12493] Simulation top is 'decoder_tb'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'COUNTER_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'decoder_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
+"xvhdl --incr --relax -prj decoder_tb_vhdl.prj"
 ECHO est  desactivado.
 ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DECODER_TB'
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot decoder_tb_behav xil_defaultlib.decoder_tb -log elaborate.log"
 ECHO est  desactivado.
 ECHO est  desactivado.
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot decoder_tb_behav xil_defaultlib.decoder_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -306,17 +418,17 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Compiling architecture dataflow of entity xil_defaultlib.decoder [\decoder(size_code=5,n_segmentos...]
+Compiling architecture bench of entity xil_defaultlib.decoder_tb
+Built simulation snapshot decoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "COUNTER_tb_behav -key {Behavioral:sim_1:Functional:COUNTER_tb} -tclbatch {COUNTER_tb.tcl} -log {simulate.log}"
+   with args "decoder_tb_behav -key {Behavioral:sim_1:Functional:decoder_tb} -tclbatch {decoder_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
-source COUNTER_tb.tcl
+source decoder_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -327,524 +439,89 @@ source COUNTER_tb.tcl
 #   }
 # }
 # run 1000ns
+Error: SEGMENTOS SHOULD BE 0000001.
+Time: 0 ps  Iteration: 0  Process: /DECODER_TB/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 0100100.
+Time: 10 ns  Iteration: 0  Process: /DECODER_TB/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 0001000.
+Time: 20 ns  Iteration: 0  Process: /DECODER_TB/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 0111000.
+Time: 30 ns  Iteration: 0  Process: /DECODER_TB/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+Error: SEGMENTOS SHOULD BE 1100011.
+Time: 40 ns  Iteration: 0  Process: /DECODER_TB/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
 Failure: Success: simulation finished.
-Time: 150 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 150 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 131
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'COUNTER_tb_behav' loaded.
+Time: 50 ns  Iteration: 0  Process: /DECODER_TB/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd
+$finish called at time : 50 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd" Line 61
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'decoder_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1605.266 ; gain = 2.816
+set_property top DISPLAY_CONTROL_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'COUNTER_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'DISPLAY_CONTROL_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 150 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 150 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 132
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 160 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 160 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 132
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 170 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 170 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 190 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 190 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 190 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 190 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 200 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 200 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 180 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 180 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 170 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 170 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 135
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 165 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 165 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 135
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
-ECHO est  desactivado.
-ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
-ECHO est  desactivado.
-ECHO est  desactivado.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 185 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 185 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
+"xvhdl --incr --relax -prj DISPLAY_CONTROL_tb_vhdl.prj"
 ECHO est  desactivado.
 ECHO est  desactivado.
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'COUNTER'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DECODER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'decoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/EDGE_DETECTOR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'EDGE_DETECTOR'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/PRESCALER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRESCALER'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/SYNCHRNZR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MAQ_EXP'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'COUNTER_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/SYNCHRNZR_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TB_EDGE.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'EDGE_DETECTOR_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TESTBENCH.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TESTBENCH'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM_TB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DECODER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DECODER_TB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/PRESCALER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRESCALER_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log"
 ECHO est  desactivado.
 ECHO est  desactivado.
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -857,42 +534,63 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.DISPLAY_CONTROL [\DISPLAY_CONTROL(size_cuenta=5,n...]
+Compiling architecture bench of entity xil_defaultlib.display_control_tb
+Built simulation snapshot DISPLAY_CONTROL_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DISPLAY_CONTROL_tb_behav -key {Behavioral:sim_1:Functional:DISPLAY_CONTROL_tb} -tclbatch {DISPLAY_CONTROL_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
-Failure: Success: simulation finished.
-Time: 185 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 185 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
+source DISPLAY_CONTROL_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Array sizes do not match, left array has 5 elements, right array has 6 elements
+Time: 225 ns  Iteration: 1  Process: /DISPLAY_CONTROL_tb/uut/line__59
+  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd
+
+HDL Line: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd:133
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DISPLAY_CONTROL_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1607.539 ; gain = 1.488
 relaunch_sim
 Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj COUNTER_tb_vhdl.prj"
+"xvhdl --incr --relax -prj DISPLAY_CONTROL_tb_vhdl.prj"
 ECHO est  desactivado.
 ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/COUNTER.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'COUNTER'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL_tb'
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'COUNTER_tb'
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log"
 ECHO est  desactivado.
 ECHO est  desactivado.
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot COUNTER_tb_behav xil_defaultlib.COUNTER_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -905,14 +603,242 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.COUNTER [\COUNTER(n_monedas=4,n_refrescos...]
-Compiling architecture bench of entity xil_defaultlib.counter_tb
-Built simulation snapshot COUNTER_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.DISPLAY_CONTROL [\DISPLAY_CONTROL(size_cuenta=5,n...]
+Compiling architecture bench of entity xil_defaultlib.display_control_tb
+Built simulation snapshot DISPLAY_CONTROL_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Array sizes do not match, left array has 5 elements, right array has 6 elements
+Time: 225 ns  Iteration: 1  Process: /DISPLAY_CONTROL_tb/uut/line__59
+  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd
+
+HDL Line: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd:133
+step
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+step
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'DISPLAY_CONTROL_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj DISPLAY_CONTROL_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MAQ_EXP'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.DISPLAY_CONTROL [\DISPLAY_CONTROL(size_cuenta=5,n...]
+Compiling architecture bench of entity xil_defaultlib.display_control_tb
+Built simulation snapshot DISPLAY_CONTROL_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DISPLAY_CONTROL_tb_behav -key {Behavioral:sim_1:Functional:DISPLAY_CONTROL_tb} -tclbatch {DISPLAY_CONTROL_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source DISPLAY_CONTROL_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Array sizes do not match, left array has 5 elements, right array has 6 elements
+Time: 225 ns  Iteration: 1  Process: /DISPLAY_CONTROL_tb/uut/line__61
+  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd
+
+HDL Line: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd:135
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DISPLAY_CONTROL_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1618.047 ; gain = 9.727
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj DISPLAY_CONTROL_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Array sizes do not match, left array has 5 elements, right array has 6 elements
+Time: 225 ns  Iteration: 1  Process: /DISPLAY_CONTROL_tb/uut/line__61
+  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd
+
+HDL Line: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd:135
+run all
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj DISPLAY_CONTROL_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.DISPLAY_CONTROL [\DISPLAY_CONTROL(size_cuenta=5,n...]
+Compiling architecture bench of entity xil_defaultlib.display_control_tb
+Built simulation snapshot DISPLAY_CONTROL_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Array sizes do not match, left array has 5 elements, right array has 6 elements
+Time: 255 ns  Iteration: 1  Process: /DISPLAY_CONTROL_tb/uut/line__61
+  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd
+
+HDL Line: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd:101
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj DISPLAY_CONTROL_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'DISPLAY_CONTROL_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot DISPLAY_CONTROL_tb_behav xil_defaultlib.DISPLAY_CONTROL_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.DISPLAY_CONTROL [\DISPLAY_CONTROL(size_cuenta=5,n...]
+Compiling architecture bench of entity xil_defaultlib.display_control_tb
+Built simulation snapshot DISPLAY_CONTROL_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 Time resolution is 1 ps
 Failure: Success: simulation finished.
-Time: 185 ns  Iteration: 0  Process: /COUNTER_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd
-$finish called at time : 185 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/COUNTER_TB.vhd" Line 136
+Time: 450 ns  Iteration: 0  Process: /DISPLAY_CONTROL_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd
+$finish called at time : 450 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/DISPLAY_CTRL_TB.vhd" Line 105
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 set_property top TESTBENCH [get_filesets sim_1]
@@ -933,11 +859,7 @@ INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneD
 "xvhdl --incr --relax -prj TESTBENCH_vhdl.prj"
 ECHO est  desactivado.
 ECHO est  desactivado.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/DISPLAY_CONTROL.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'DISPLAY_CONTROL'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sources_1/new/MAQ_EXP.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'MAQ_EXP'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
 "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TESTBENCH_behav xil_defaultlib.TESTBENCH -log elaborate.log"
@@ -992,8 +914,122 @@ Time: 200 ns  Iteration: 0  Process: /TESTBENCH/stimulus  File: C:/Users/diego/O
 $finish called at time : 200 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/TESTBENCH.vhd" Line 142
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'TESTBENCH_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1606.266 ; gain = 4.578
+set_property top FSM_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'FSM_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSM_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj FSM_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSM [\FSM(n_refrescos=2,n_estados=4,n...]
+Compiling architecture bench of entity xil_defaultlib.fsm_tb
+Built simulation snapshot FSM_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FSM_tb_behav -key {Behavioral:sim_1:Functional:FSM_tb} -tclbatch {FSM_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source FSM_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Failure: Success: simulation finished.
+Time: 70 ns  Iteration: 0  Process: /FSM_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd
+$finish called at time : 70 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" Line 131
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FSM_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2007.805 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'FSM_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj FSM_tb_vhdl.prj"
+ECHO est  desactivado.
+ECHO est  desactivado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'FSM_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log"
+ECHO est  desactivado.
+ECHO est  desactivado.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSM [\FSM(n_refrescos=2,n_estados=4,n...]
+Compiling architecture bench of entity xil_defaultlib.fsm_tb
+Built simulation snapshot FSM_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+Failure: Success: simulation finished.
+Time: 70 ns  Iteration: 0  Process: /FSM_tb/stimulus  File: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd
+$finish called at time : 70 ns : File "C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.srcs/sim_1/new/FSM_TB.vhd" Line 131
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Jan  5 20:03:25 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan  4 18:24:10 2024...
