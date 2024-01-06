@@ -43,8 +43,6 @@ entity MAQ_EXP is
         ERROR : out STD_LOGIC;
         REFRESCO_OUT : out STD_LOGIC;
         ESTADOS: out STD_LOGIC_VECTOR (N_ESTADOS - 1 downto 0);
-        LED_AUX5: out STD_LOGIC;
-        LED_RESET: out STD_LOGIC;
         SEGMENTOS: out STD_LOGIC_VECTOR(N_SEGMENTOS - 1 downto 0);
         DIGCTRL: out STD_LOGIC_VECTOR(N_DISPLAYS - 1 downto 0)
      );
@@ -283,9 +281,5 @@ PORT MAP(
     CLK => CLK,
     CLK_OUT => AUX_CLK
 );
-
-LED_AUX5 <= PAGAR;
-LED_RESET <= RESET;
-
 
 end Estructural;
