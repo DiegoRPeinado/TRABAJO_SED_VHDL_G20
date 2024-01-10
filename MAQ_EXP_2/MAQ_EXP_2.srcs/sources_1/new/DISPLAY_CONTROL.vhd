@@ -97,7 +97,7 @@ begin
                         CODE_SIG(1) <= PRECIOS(SIZE_CUENTA - 1 downto 0) - CUENTA;
                     END IF;
                  ELSIF TIPO_REFRESCO = "10" THEN
-                    IF PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA - 1) - CUENTA >= "01010" THEN
+                    IF PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA) - CUENTA >= "01010" THEN
                         CODE_SIG(1) <= PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA) - "01010" - CUENTA;
                     ELSE 
                         CODE_SIG(1) <= PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA) - CUENTA;
@@ -114,7 +114,7 @@ begin
                     ELSE CODE_SIG(1) <= "00000";
                     END IF;
                 ELSIF TIPO_REFRESCO = "10" THEN
-                    IF PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA - 1) - CUENTA >= "01010" THEN
+                    IF PRECIOS((SIZE_CUENTA*2) - 1 downto SIZE_CUENTA) - CUENTA >= "01010" THEN
                         CODE_SIG(1) <= "00001";
                     ELSE CODE_SIG(1) <= "00000";
                     END IF;

@@ -76,6 +76,7 @@ begin
                 ESTADOS_OUT <= "0001";
                 CONTROL_OUT <= CONTROL_IN(N_DISPLAYS - 1 DOWNTO 0);
                 CODE_OUT <= CODE_IN(SIZE_CODE - 1 DOWNTO 0);
+                
             when S1 =>
                 ERROR <= '0';
                 REFRESCO_OUT <= '0';

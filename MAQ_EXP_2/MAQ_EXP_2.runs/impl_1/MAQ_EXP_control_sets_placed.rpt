@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Dec 22 13:25:35 2023
+| Date         : Wed Jan 10 13:09:36 2024
 | Host         : LAPTOP-9VF0APCD running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MAQ_EXP_control_sets_placed.rpt
 | Design       : MAQ_EXP
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    34 |
+| Unused register locations in slices containing registers |    43 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,9 +39,9 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
-| >= 0 to < 4        |     3 |
-| >= 4 to < 6        |     2 |
+| Total control sets |    10 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     4 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              51 |           20 |
-| No           | No                    | Yes                    |               2 |            1 |
+| No           | No                    | No                     |              88 |           34 |
+| No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               4 |            1 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               5 |            2 |
+| Yes          | No                    | No                     |              10 |            5 |
+| Yes          | No                    | Yes                    |               7 |            4 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,16 +70,19 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------+---------------+-----------------------------------------------------+------------------+----------------+--------------+
-|       Clock Signal      | Enable Signal |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------------+---------------+-----------------------------------------------------+------------------+----------------+--------------+
-|  CTR/PAGO_OK_SIG_reg/G0 |               |                                                     |                1 |              1 |         1.00 |
-|  CTR/ERROR_SIG_reg/G0   |               |                                                     |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG          |               | MAQ_ESTADOS/FSM_sequential_CURRENT_STATE[1]_i_2_n_0 |                1 |              2 |         2.00 |
-|  CLK_IBUF_BUFG          |               | SYNC/SREG_2_MONEDAS_reg[3]_0                        |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG          | EDGE/E[0]     | SYNC/AR[0]                                          |                2 |              5 |         2.50 |
-|  AUX_CLK_BUFG           |               |                                                     |                5 |             16 |         3.20 |
-|  CLK_IBUF_BUFG          |               |                                                     |               13 |             33 |         2.54 |
-+-------------------------+---------------+-----------------------------------------------------+------------------+----------------+--------------+
++-------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal      |                    Enable Signal                    |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|  CTR/ERROR_SIG_reg/G0   |                                                     |                                                     |                1 |              1 |         1.00 |
+|  CTR/PAGO_OK_SIG_reg/G0 |                                                     |                                                     |                1 |              1 |         1.00 |
+|  SYNC/E[0]              |                                                     |                                                     |                2 |              2 |         1.00 |
+|  CLK_IBUF_BUFG          | MAQ_ESTADOS/FSM_sequential_CURRENT_STATE[1]_i_1_n_0 | MAQ_ESTADOS/FSM_sequential_CURRENT_STATE[1]_i_3_n_0 |                1 |              2 |         2.00 |
+|  CLK_IBUF_BUFG          |                                                     | SYNC/SREG_2_MONEDAS_reg[3]_0                        |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG          | EDGE/EDGE_MONEDAS_reg[3]_1[0]                       | SYNC/E[0]                                           |                3 |              5 |         1.67 |
+|  AUX_CLK_BUFG           | CONTROL/CODE_SIG[2]_1                               |                                                     |                3 |              5 |         1.67 |
+|  AUX_CLK_BUFG           | CONTROL/CODE_SIG[1]_2                               |                                                     |                2 |              5 |         2.50 |
+|  CLK_IBUF_BUFG          |                                                     |                                                     |               19 |             36 |         1.89 |
+|  AUX_CLK_BUFG           |                                                     |                                                     |               11 |             48 |         4.36 |
++-------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
 
 

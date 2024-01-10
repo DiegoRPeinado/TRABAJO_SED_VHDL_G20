@@ -3,17 +3,13 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Dec 29 12:55:48 2023
-# Process ID: 18340
+# Start of session at: Sat Jan  6 13:50:29 2024
+# Process ID: 15208
 # Current directory: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17628 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MAQ_EXP_2\MAQ_EXP_2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5688 C:\Users\diego\OneDrive\Documentos\TRABAJO_SED_VHDL_G20\MAQ_EXP_2\MAQ_EXP_2.xpr
 # Log file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/vivado.log
 # Journal file: C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2\vivado.jou
 # Running On: LAPTOP-9VF0APCD, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 8320 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/diego/OneDrive/Documentos/TRABAJO_SED_VHDL_G20/MAQ_EXP_2/MAQ_EXP_2.xpr
-update_compile_order -fileset sources_1
-launch_simulation
-source TESTBENCH.tcl
-close_sim

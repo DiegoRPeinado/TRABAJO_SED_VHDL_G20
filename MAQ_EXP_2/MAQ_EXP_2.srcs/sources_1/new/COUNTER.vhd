@@ -66,24 +66,22 @@ process(CLK, RESET)
     
             if (RESET='0' OR CE='0') then 
                 CUENTA_SIG <= (OTHERS => '0');  -- Inicializo la cuenta
-                REFRESCO_ACTUAL_SIG <= (OTHERS => '0'); -- Reiniciamos el refresco elegido
-            elsif rising_edge(CLK) and CE='1' then
+                REFRESCO_ACTUAL_SIG <= TIPO_REFRESCO;
+                -- Reiniciamos el refresco elegido
+            elsif rising_edge(CLK) AND CE='1' then
                 -- Podemos cambiar el tipo de refresco solo cuando no hemos empezado a pagar
-                if CUENTA_SIG = "00000" then     
-                    REFRESCO_ACTUAL_SIG <= TIPO_REFRESCO;
-                end if;
-                if REFRESCO_ACTUAL_SIG /= "00" then
-                    -- Empezamos a contar una vez hemos elegido el refresco
-                    -- Suma la moneda introducida al contador CUENTA_SIG
-                    if MONEDAS = "0001" then 
-                        CUENTA_SIG <= CUENTA_SIG + "00001";  -- +10cents
-                    elsif MONEDAS = "0010" then
-                        CUENTA_SIG <= CUENTA_SIG + "00010";  -- +20cents
-                    elsif MONEDAS = "0100" then
-                        CUENTA_SIG <= CUENTA_SIG + "00101";  -- +50cents
-                    elsif MONEDAS = "1000" then
-                        CUENTA_SIG <= CUENTA_SIG + "01010";  -- +1€
-                    end if;
+                    if REFRESCO_ACTUAL_SIG /= "00" then
+                        -- Empezamos a contar una vez hemos elegido el refresco
+                        -- Suma la moneda introducida al contador CUENTA_SIG
+                        if MONEDAS = "0001" then 
+                            CUENTA_SIG <= CUENTA_SIG + "00001";  -- +10cents
+                        elsif MONEDAS = "0010" then
+                            CUENTA_SIG <= CUENTA_SIG + "00010";  -- +20cents
+                        elsif MONEDAS = "0100" then
+                            CUENTA_SIG <= CUENTA_SIG + "00101";  -- +50cents
+                        elsif MONEDAS = "1000" then
+                            CUENTA_SIG <= CUENTA_SIG + "01010";  -- +1€
+                        end if;
                 end if;
             end if;
         
